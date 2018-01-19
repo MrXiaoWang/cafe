@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="__PUBLIC__/css/pintuer.css">
+<link rel="stylesheet" href="__PUBLIC__/css/admin.css">
+<script src="__PUBLIC__/js/jquery.js"></script>
+<script src="__PUBLIC__/js/pintuer.js"></script>
+</head>
+
+<body>
+<div class="panel admin-panel">
+  <div class="panel-head"><strong class="icon-reorder"> 用户列表</strong></div>
+    <table class="table table-hover text-center">
+      <tr>
+        <th width="5%">ID</th>
+        <th width="8%">用户姓名</th>
+        <th width="5%">性别</th>
+        <th width="10%">手机号</th>
+        <th width="10%">邮箱</th>
+        <th width="15%">联系地址</th>
+        <th width="15%">头像</th>
+        <th width="10%">操作</th>
+      </tr>
+      <foreach name='list' item='list'>
+      <tr>
+        <td>{$list.id}</td>
+        <td>{$list.u_name}</td>
+        <td>
+            <if condition="$list.u_sex eq 0"> 男
+            <elseif condition="$list.u_sex eq 1"/>女
+            </if>
+        </td>
+        <td>{$list.u_phone}</td>
+        <td>{$list.u_email}</td>
+        <td>{$list.u_address}</td>
+        <td><img src="__PUBLIC__/images/{$list.u_img}" class="radius-circle" height="50" alt="" /></td>
+        <td>
+        <div class="button-group">
+        <a class="button border-main" href="cateedit.html"><span class="icon-edit"></span> 修改</a>
+        </div>
+        </td>
+      </tr>
+     </foreach>
+      <tr>
+        <td colspan="8">
+
+          <div class="pagelist">{$page}</div>
+        </td>
+      </tr>
+
+    </table>
+</div>
+
+</body>
+</html>

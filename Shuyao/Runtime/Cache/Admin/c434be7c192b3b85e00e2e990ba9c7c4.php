@@ -6,10 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta name="renderer" content="webkit">
 <title></title>
-<link rel="stylesheet" href="/Shuyao/Public/css/pintuer.css">
-<link rel="stylesheet" href="/Shuyao/Public/css/admin.css">
-<script src="/Shuyao/Public/js/jquery.js"></script>
-<script src="/Shuyao/Public/js/pintuer.js"></script>
+<link rel="stylesheet" href="/cafe/Public/css/pintuer.css">
+<link rel="stylesheet" href="/cafe/Public/css/admin.css">
+<script src="/cafe/Public/js/jquery.js"></script>
+<script src="/cafe/Public/js/pintuer.js"></script>
 
 <!-- 判断菜品类型是否重复 -->
 <!-- <script type="text/javascript">

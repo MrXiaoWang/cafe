@@ -1,7 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class MenuController extends Controller {
+class MenuController extends CheckController {
 	//商品类型管理查询
     public function type(){
     	$type=M('menutype');
