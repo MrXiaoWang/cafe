@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="__PUBLIC__/css/pintuer.css">
+<link rel="stylesheet" href="__PUBLIC__/css/admin.css">
+<script src="__PUBLIC__/js/jquery.js"></script>
+<script src="__PUBLIC__/js/pintuer.js"></script>
+<style type="text/css">
+.tu{width: 260px; height: 160px;} 
+.tutu{margin-left: -340px; float: left; width: 100px; height: 100px;}
+.fi{float: left; margin-left: 165px; width: 200px; margin-top: 40px;}
+</style>
+</head>
+<body>
+
+<div class="panel admin-panel margin-top" id="add">
+  <div class="panel-head" id="add">
+  <strong><span class="icon-pencil-square-o"></span> 修改菜品</strong></div>
+  <div class="body-content">
+    <form method="post" class="form-x" action="{:U('Menu/updminfo')}" enctype="multipart/form-data"> 
+    <input type="hidden" name="id" value="{$data.id}">   
+      <div class="form-group">
+        <div class="label">
+          <label>菜品名称：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" value="{$data.minfo_name}" name="minfo_name" 
+          data-validate="required:请输入菜品名称" />
+          <div class="tips"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>菜品图：</label>
+        </div>
+        <div class="field">
+          <input type="file"  name="minfo_img" class="fi"  ><!-- data-validate="required:请选择菜品图" -->
+          <if condition="$data neq null">
+            <img class="tutu" width="100" 
+            src="__UPLOAD__/{$data.minfo_img}">
+            <input type="hidden" name="h_minfo_img" value="{$data.minfo_img}"/>
+          </if>
+          <div class="tipss">菜品图片仅支持.jpg, .gif, .png, .jpeg 格式</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+          <div class="label">
+            <label>菜品所属类型：</label>
+          </div>
+          <div class="field">
+            <select name="mtype_id" class="input w50">
+             <!--  <option value="{$data.mtype_id}">{$data.mtype_name}</option> -->
+              <foreach name="data2" item="t">
+              <option value="{$t.mtype_id}">{$t.mtype_name}</option>
+              </foreach>
+            </select>
+            <div class="tips"></div>
+          </div>
+        </div>
+      <div class="form-group">
+        <div class="label">
+          <label>菜品价格：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" name="minfo_price" value="{$data.minfo_price}"  data-validate="required:,number:菜品单价必须为数字" />
+          <div class="tips"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>菜品数量：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" name="minfo_count" value="{$data.minfo_count}"  data-validate="required:,number:菜品数量必须为数字" />
+          <div class="tips"></div>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <div class="label">
+          <label>菜品描述：</label>
+        </div>
+        <div class="field">
+          <textarea name="minfo_remark" data-validate="required:菜品简介不能为空" class="input" style="height:450px; border:1px solid #ddd;">{$data.minfo_remark}</textarea>
+          <div class="tips"></div>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <div class="label">
+          <label></label>
+        </div>
+        <div class="field">
+          <button class="button bg-main icon-check-square-o" type="submit"> 确认修改此菜</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+</body>
+</html>
