@@ -8,8 +8,13 @@
 <title></title>
 <link rel="stylesheet" href="__PUBLIC__/css/pintuer.css">
 <link rel="stylesheet" href="__PUBLIC__/css/admin.css">
+<!-- <link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet"> -->
+<!-- <link href="__PUBLIC__/css/bootstrap-fileinput.css" rel="stylesheet"> -->
 <script src="__PUBLIC__/js/jquery.js"></script>
 <script src="__PUBLIC__/js/pintuer.js"></script>
+<style type="text/css">
+.tu{width: 260px; height: 160px;} 
+</style>
 </head>
 <body>
 
@@ -33,53 +38,67 @@
         <th>菜品价格</th>
         <th width="310">操作</th>
       </tr>
-      
+      <foreach name="data" item="minfo">
         <tr>
-          <td style="text-align:left; padding-left:20px;">1</td>
-          
-          <td width="10%"><img src="__PUBLIC__/images/11.jpg" alt="" width="70" height="50" /></td>
-          <td>这是一套MUI后台</td>
-          <td><font color="#00CC99">首页</font></td>
-          <td>产品分类</td>
-          <td><div class="button-group"> <a class="button border-main" href="add.html"><span class="icon-edit"></span> 修改</a> <a class="button border-red" href="javascript:void(0)" onclick="return del(1,1,1)"><span class="icon-trash-o"></span> 删除</a> </div></td>
+          <td style="text-align:left; padding-left:20px;">{$minfo.id}</td>
+          <td width="10%"><img src="__UPLOAD__/{$minfo.minfo_img}" alt="" width="70" height="50" /></td>
+          <td>{$minfo.minfo_name}</td>
+          <td><font color="#00CC99">{$minfo.mtype_name}</font></td>
+          <td>{$minfo.minfo_price}￥</td>
+          <td><div class="button-group"> <a class="button border-main" 
+          href="{:U('Menu/updminfo')}?id={$minfo.id}"><span class="icon-edit"></span> 修改</a> <a class="button border-red" href="{:U('Menu/delminfo')}?id={$minfo.id}" 
+          onclick="return confirm('您确认要将此菜品删除吗?');"><span class="icon-trash-o"></span> 删除</a> </div></td>
         </tr>
-   		
+   		</foreach>
       <tr>
-        <td colspan="8">
-        <div class="pagelist"> 
-        <a href="">上一页</a> 
-        <span class="current">1</span>
-        <a href="">2</a><a href="">3</a>
-        <a href="">下一页</a>
-        <a href="">尾页</a> </div>
+        <td colspan="6">
+        <div class="pagelist"><span>{$page}</span> </div>
         </td>
-      </tr>
+    </tr>
     </table>
   </div>
 
 <div class="panel admin-panel margin-top" id="add">
   <div class="panel-head" id="add">
-  <strong><span class="icon-pencil-square-o"></span> 添加菜品</strong></div>
+  <strong><span class="icon-pencil-square-o"></span> 添加更多菜品</strong></div>
   <div class="body-content">
-    <form method="post" class="form-x" action="">    
+    <form method="post" class="form-x" action="{:U('Menu/addminfo')}" enctype="multipart/form-data">    
       <div class="form-group">
         <div class="label">
           <label>菜品名称：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" value="" name="title" data-validate="required:请输入标题" />
+          <input type="text" class="input w50" value="" name="minfo_name" 
+          data-validate="required:请输入菜品名称" />
           <div class="tips"></div>
         </div>
       </div>
+
+      <!-- <div class="form-group">
+        <div class="label">
+          <label>菜品图：</label>
+        </div>
+        <div class="field">
+        <div class="tu">
+          <div  style="width: 200px;height: auto;max-height:150px;">
+              <img id='minfo_img' style="width: 100%;height: auto;max-height: 140px;" 
+              src="__PUBLIC__/images/noimage.png" alt="" />
+          </div>
+        </div>
+          <input type="file" class="button bg-blue margin-left" id="image1" style="float:left;">
+          <div class="tipss">菜品图片仅支持.jpg, .gif, .png, .jpeg 格式</div>
+        </div>
+      </div> -->
 
       <div class="form-group">
         <div class="label">
           <label>菜品图：</label>
         </div>
         <div class="field">
-          <input type="text" id="url1" name="img" class="input tips" style="width:25%; float:left;"  value="" data-toggle="hover" data-place="right" data-image="" />
-          <input type="button" class="button bg-blue margin-left" id="image1" value="+ 浏览上传"  style="float:left;">
-          <div class="tipss">图片尺寸：1920*500</div>
+          <!-- <input type="text" id="url1" name="minfo_img" class="input tips" style="width:25%; float:left;" 
+           name="minfo_name"  data-validate="required:请上传菜品图"/> -->
+          <input type="file"  name="minfo_img" style="float:left;" data-validate="required:请选择菜品图">
+          <div class="tipss">菜品图片仅支持.jpg, .gif, .png, .jpeg 格式</div>
         </div>
       </div>
 
@@ -88,12 +107,11 @@
             <label>菜品所属类型：</label>
           </div>
           <div class="field">
-            <select name="cid" class="input w50">
-              <option value="">请选择分类</option>
-              <option value="">产品分类</option>
-              <option value="">产品分类</option>
-              <option value="">产品分类</option>
-              <option value="">产品分类</option>
+            <select name="mtype_id" class="input w50">
+              <option value="">请选择菜品类型</option>
+              <foreach name="data1" item="t">
+              <option value="{$t.mtype_id}">{$t.mtype_name}</option>
+              </foreach>
             </select>
             <div class="tips"></div>
           </div>
@@ -103,7 +121,7 @@
           <label>菜品价格：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" name="sort" value=""  data-validate="required:,number:排序必须为数字" />
+          <input type="text" class="input w50" name="minfo_price" value=""  data-validate="required:,number:菜品单价必须为数字" />
           <div class="tips"></div>
         </div>
       </div>
@@ -113,7 +131,7 @@
           <label>菜品数量：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" name="sort" value=""  data-validate="required:,number:排序必须为数字" />
+          <input type="text" class="input w50" name="minfo_count" value=""  data-validate="required:,number:菜品数量必须为数字" />
           <div class="tips"></div>
         </div>
       </div>
@@ -124,14 +142,13 @@
         </div>
         <div class="field">
           <div class="button-group radio">
-          
           <label class="button active">
             <span class="icon icon-check"></span>             
-              <input name="isshow" value="1" type="radio" checked="checked">是             
+              <input name="minfo_istuijian" value="1" type="radio" checked="checked">是             
           </label>             
         
           <label class="button active"><span class="icon icon-times"></span>            
-              <input name="isshow" value="0"  type="radio" checked="checked">否
+              <input name="minfo_istuijian" value="0"  type="radio" checked="checked">否
           </label>         
            </div>       
         </div>
@@ -146,16 +163,25 @@
           
           <label class="button active">
             <span class="icon icon-check"></span>             
-              <input name="isshow" value="1" type="radio" checked="checked">是             
+              <input name="minfo_isnew" value="1" type="radio" checked="checked">是             
           </label>             
         
           <label class="button active"><span class="icon icon-times"></span>            
-              <input name="isshow" value="0"  type="radio" checked="checked">否
+              <input name="minfo_isnew" value="0"  type="radio" checked="checked">否
           </label>         
            </div>       
         </div>
      </div>
-
+      
+      <div class="form-group">
+        <div class="label">
+          <label>菜品描述：</label>
+        </div>
+        <div class="field">
+          <textarea name="minfo_remark" data-validate="required:菜品简介不能为空" class="input" style="height:450px; border:1px solid #ddd;"></textarea>
+          <div class="tips"></div>
+        </div>
+      </div>
       
       <div class="form-group">
         <div class="label">
@@ -169,178 +195,5 @@
   </div>
 </div>
 
-<script type="text/javascript">
-
-//搜索
-function changesearch(){	
-		
-}
-
-//单个删除
-function del(id,mid,iscid){
-	if(confirm("您确定要删除吗?")){
-		
-	}
-}
-
-//全选
-$("#checkall").click(function(){ 
-  $("input[name='id[]']").each(function(){
-	  if (this.checked) {
-		  this.checked = false;
-	  }
-	  else {
-		  this.checked = true;
-	  }
-  });
-})
-
-//批量删除
-function DelSelect(){
-	var Checkbox=false;
-	 $("input[name='id[]']").each(function(){
-	  if (this.checked==true) {		
-		Checkbox=true;	
-	  }
-	});
-	if (Checkbox){
-		var t=confirm("您确认要删除选中的内容吗？");
-		if (t==false) return false;		
-		$("#listform").submit();		
-	}
-	else{
-		alert("请选择您要删除的内容!");
-		return false;
-	}
-}
-
-//批量排序
-function sorts(){
-	var Checkbox=false;
-	 $("input[name='id[]']").each(function(){
-	  if (this.checked==true) {		
-		Checkbox=true;	
-	  }
-	});
-	if (Checkbox){	
-		
-		$("#listform").submit();		
-	}
-	else{
-		alert("请选择要操作的内容!");
-		return false;
-	}
-}
-
-
-//批量首页显示
-function changeishome(o){
-	var Checkbox=false;
-	 $("input[name='id[]']").each(function(){
-	  if (this.checked==true) {		
-		Checkbox=true;	
-	  }
-	});
-	if (Checkbox){
-		
-		$("#listform").submit();	
-	}
-	else{
-		alert("请选择要操作的内容!");		
-	
-		return false;
-	}
-}
-
-//批量推荐
-function changeisvouch(o){
-	var Checkbox=false;
-	 $("input[name='id[]']").each(function(){
-	  if (this.checked==true) {		
-		Checkbox=true;	
-	  }
-	});
-	if (Checkbox){
-		
-		
-		$("#listform").submit();	
-	}
-	else{
-		alert("请选择要操作的内容!");	
-		
-		return false;
-	}
-}
-
-//批量置顶
-function changeistop(o){
-	var Checkbox=false;
-	 $("input[name='id[]']").each(function(){
-	  if (this.checked==true) {		
-		Checkbox=true;	
-	  }
-	});
-	if (Checkbox){		
-		
-		$("#listform").submit();	
-	}
-	else{
-		alert("请选择要操作的内容!");		
-	
-		return false;
-	}
-}
-
-
-//批量移动
-function changecate(o){
-	var Checkbox=false;
-	 $("input[name='id[]']").each(function(){
-	  if (this.checked==true) {		
-		Checkbox=true;	
-	  }
-	});
-	if (Checkbox){		
-		
-		$("#listform").submit();		
-	}
-	else{
-		alert("请选择要操作的内容!");
-		
-		return false;
-	}
-}
-
-//批量复制
-function changecopy(o){
-	var Checkbox=false;
-	 $("input[name='id[]']").each(function(){
-	  if (this.checked==true) {		
-		Checkbox=true;	
-	  }
-	});
-	if (Checkbox){	
-		var i = 0;
-	    $("input[name='id[]']").each(function(){
-	  		if (this.checked==true) {
-				i++;
-			}		
-	    });
-		if(i>1){ 
-	    	alert("只能选择一条信息!");
-			$(o).find("option:first").prop("selected","selected");
-		}else{
-		
-			$("#listform").submit();		
-		}	
-	}
-	else{
-		alert("请选择要复制的内容!");
-		$(o).find("option:first").prop("selected","selected");
-		return false;
-	}
-}
-
-</script>
 </body>
 </html>

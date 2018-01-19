@@ -40,7 +40,7 @@ ul,li{ list-style-type:none;}
 .form-x .form-group .label{ width:10%;}
 .form-x .form-button { margin-left:10%;}
 .w50 { width:25%; float:left;}
-.form-x .tipss{ float:left; padding-left:10px; color:#888; line-height:42px;}
+.form-x .tipss{ float:left; padding-left:10px; color:#888; line-height:42px;margin-top: 35px;}
 .input-help { float:left; line-height:30px;}
 .input-help li{ float:left;margin-left:10px;}
 .bread{ margin-left:190px; margin-top:4px;}

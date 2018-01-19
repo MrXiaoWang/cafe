@@ -52,7 +52,7 @@
   <ul ><!-- style="display:block" -->
     <li><a href="<?php echo U('Menu/type');?>" target="right"><span class="icon-caret-right"></span>商品类型管理</a></li>
     <li><a href="<?php echo U('Menu/menu');?>" target="right"><span class="icon-caret-right"></span>菜品管理</a></li>
-    <li><a href="<?php echo U('Menu/jiushui');?>" target="right"><span class="icon-caret-right"></span>酒水管理</a></li>
+   <!--  <li><a href="<?php echo U('Menu/jiushui');?>" target="right"><span class="icon-caret-right"></span>酒水管理</a></li> -->
   </ul>  
    
   <h2>

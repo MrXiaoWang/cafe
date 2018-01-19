@@ -10,6 +10,30 @@
 <link rel="stylesheet" href="/Shuyao/Public/css/admin.css">
 <script src="/Shuyao/Public/js/jquery.js"></script>
 <script src="/Shuyao/Public/js/pintuer.js"></script>
+
+<!-- 判断菜品类型是否重复 -->
+<!-- <script type="text/javascript">
+    $(document).ready(function(){
+      //点击事件
+      $("#submit").click(function(){
+        mtype_name=$("#mtype_name").val();//获得菜品类型文本框的值
+        $url = "<?php echo U('Menu/addtype');?>";
+        $.ajax({
+          type:"POST",
+          url:$url,
+          data:{mtype_name:mtype_name},
+          dataType:"json",
+          success:function(json){
+            alert(json);
+            //判断是否成功
+            // if(json.ok==1)";
+            // }else
+          }
+        });
+      })
+    });
+</script> -->
+
 </head>
 
 <body>
@@ -20,37 +44,29 @@
   </div>
   <table class="table table-hover text-center">
     <tr>
-      <th width="5%">ID</th>
-      <th width="15%">类型编号</th>
+      <th width="15%">菜品类型编号</th>
       <th width="10%">类型名称</th>
       <th width="10%">操作</th>
     </tr>
-    <tr>
-      <td>1</td>
-      <td>123</td>
-      <td>逃犯洗列</td>
+    <?php if(is_array($data)): foreach($data as $key=>$type): ?><tr>
+      <td><?php echo ($type["mtype_id"]); ?></td>
+      <td><a href="<?php echo U('Menu/menuinfo');?>?id=<?php echo ($type["mtype_id"]); ?>" style="color: #00AAEE;font-size: 15px;"><?php echo ($type["mtype_name"]); ?></a></td>
       <td>
       <div class="button-group">
-      <a class="button border-main" href="cateedit.html"><span class="icon-edit"></span> 修改</a>
-      <a class="button border-red" href="javascript:void(0)" onclick="return confirm('您确认要将此菜品类型删除吗?');">
+      <a class="button border-main" href="<?php echo U('Menu/updtype');?>?id=<?php echo ($type["mtype_id"]); ?>">
+      <span class="icon-edit"></span> 修改</a>
+      <a class="button border-red" href="<?php echo U('Menu/deltype');?>?id=<?php echo ($type["mtype_id"]); ?>" onclick="return confirm('您确认要将此菜品类型删除吗?');">
       <span class="icon-trash-o"></span> 删除</a> 
       </div>
       </td>
-    </tr>
-   
+    </tr><?php endforeach; endif; ?>
+    <!-- 分页 -->
     <tr>
-        <td colspan="8">
-        <div class="pagelist"> 
-        <a href="">上一页</a> 
-        <span class="current">1</span>
-        <a href="">2</a>
-        <a href="">3</a>
-        <a href="">下一页</a>
-        <a href="">尾页</a>
-        </div>
+        <td colspan="3">
+        <div class="pagelist"><span><?php echo ($page); ?></span> </div>
         </td>
-      </tr>
-
+    </tr>
+     
   </table>
 </div>
 
@@ -58,14 +74,13 @@
   <div class="panel-head" id="add">
   <strong><span class="icon-pencil-square-o"></span>添加菜品类型</strong></div>
   <div class="body-content">
-    <form method="post" class="form-x" action="">
-      
+    <form class="form-x" action="<?php echo U('Menu/addtype');?>" method="post">
       <div class="form-group">
         <div class="label">
           <label>菜品类型名称：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" name="title" />
+          <input type="text" class="input w50" name="mtype_name" id="mtype_name" data-validate="required:请输入菜品类型名称"/>
           <div class="tips"></div>
         </div>
       </div>
@@ -75,7 +90,7 @@
           <label></label>
         </div>
         <div class="field">
-          <button class="button bg-main icon-check-square-o" type="submit"> 提交</button>
+          <button class="button bg-main icon-check-square-o" type="submit" id="submit"> 添加此菜品系列</button>
         </div>
       </div>
     </form>
