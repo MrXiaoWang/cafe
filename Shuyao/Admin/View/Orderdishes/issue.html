@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="__PUBLIC__/css/pintuer.css">
+<link rel="stylesheet" href="__PUBLIC__/css/admin.css">
+<script src="__PUBLIC__/js/jquery.js"></script>
+<script src="__PUBLIC__/js/pintuer.js"></script>
+</head>
+
+<body>
+<div class="panel admin-panel">
+  <div class="panel-head">待出菜订单</div>
+  <!-- <div class="padding border-bottom">
+    <button type="button" class="button border-yellow" onclick="window.location.href='#add'"><span class="icon-plus-square-o"></span> 添加商品类型</button>
+  </div> -->
+  <table class="table table-hover text-center">
+    <tr>
+      <th width="3%">订单编号</th>
+      <th width="15%">菜品名称</th>
+      <th width="5%">菜品数量</th>
+      <th width="5%">桌号</th>
+      <th width="10%">备注</th>
+      <th width="10%">操作</th>
+    </tr>
+
+    <!-- 遍历数据库已经出单的数据   1 -->
+    <foreach name="list" item="c">
+      <tr>
+        <td>{$c.or_num}</td>
+        <td>{$c.minfo_name}</td>
+        <td>{$c.menuinfo_count}</td>
+        <td>{$c.cz_id}</td>
+        <td>{$c.o_remark}</td>
+        <td>
+        <div class="button-group">
+        <!-- <a class="button border-main" href='{:U("select_issue")}?id={$c.id}'>查看</a> -->
+        <a class="button border-red" href="">打印</a> 
+        </div>
+        </td>
+      </tr>
+    </foreach>
+    <!-- 结束遍历数据库已出单的数据  1 -->
+   
+    <tr>
+        <td colspan="7">
+        <div class="pagelist"> 
+        {$page}
+        </div>
+        </td>
+      </tr>
+
+    <tr>
+    </tr>
+  </table>
+</div>
+
+
+
+
+
+
+</body>
+</html>

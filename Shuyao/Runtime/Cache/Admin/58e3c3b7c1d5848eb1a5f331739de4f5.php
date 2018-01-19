@@ -70,9 +70,7 @@
     点菜与消费
   </h2>
   <ul>
-    <li><a href="list.html" target="right"><span class="icon-caret-right"></span>点菜xx</a></li>
-    <li><a href="add.html" target="right"><span class="icon-caret-right"></span>点菜xx</a></li>
-    <li><a href="cate.html" target="right"><span class="icon-caret-right"></span>点菜xx</a></li>        
+    <li><a href="<?php echo U('Orderdishes/issue');?>" target="right"><span class="icon-caret-right"></span>打印订单</a></li> 
   </ul>
 
   <h2>
