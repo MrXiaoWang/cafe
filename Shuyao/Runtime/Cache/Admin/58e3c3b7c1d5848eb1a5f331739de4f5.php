@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="renderer" content="webkit">
     <title>后台管理中心</title>  
-    <link rel="stylesheet" href="/Shuyao/Public/css/pintuer.css">
-    <link rel="stylesheet" href="/Shuyao/Public/css/admin.css">
-    <link rel="stylesheet" href="/Shuyao/Public/css/iconfont.css" />
-    <script src="/Shuyao/Public/js/jquery.js"></script>   
-    <script type="text/javascript" src="/Shuyao/Public/js/iconfont.js" ></script>
+    <link rel="stylesheet" href="/cafe/Public/css/pintuer.css">
+    <link rel="stylesheet" href="/cafe/Public/css/admin.css">
+    <link rel="stylesheet" href="/cafe/Public/css/iconfont.css" />
+    <script src="/cafe/Public/js/jquery.js"></script>   
+    <script type="text/javascript" src="/cafe/Public/js/iconfont.js" ></script>
     <style type="text/css">
   .icon {
      width: 1em; height: 1em;
@@ -23,9 +23,10 @@
 <body style="background-color:#f2f9fd;">
 <div class="header bg-main">
   <div class="logo margin-big-left fadein-top">
-    <h1><img src="/Shuyao/Public/images/y.jpg" class="radius-circle rotate-hover" height="50" alt="" />蜀肴后台管理</h1>
+    <h1><img src="/cafe/Public/images/y.jpg" class="radius-circle rotate-hover" height="50" alt="" />蜀肴后台管理</h1>
   </div>
-  <div class="head-l"><a class="button button-little bg-green" href="" target="_blank"><span class="icon-home"></span> 前台首页</a> &nbsp;&nbsp;<a href="##" class="button button-little bg-blue"><span class="icon-wrench"></span> 清除缓存</a> &nbsp;&nbsp;<a class="button button-little bg-red" href="login.html"><span class="icon-power-off"></span> 退出登录</a> </div>
+  <div class="head-l">
+  <a class="button button-little bg-green" href="" target="_blank"><span class="icon-home"></span> 前台首页</a> &nbsp;&nbsp;<a class="button button-little bg-red" href="<?php echo U('Login/logout');?>"><span class="icon-power-off"></span> 退出登录</a> </div>
 </div>
 <div class="leftnav">
   <div class="leftnav-title"><strong>列表</strong></div>
@@ -62,9 +63,7 @@
     桌台管理
   </h2>
   <ul>
-    <li><a href="list.html" target="right"><span class="icon-caret-right"></span>桌台xx</a></li>
-    <li><a href="add.html" target="right"><span class="icon-caret-right"></span>桌台xx</a></li>
-    <li><a href="cate.html" target="right"><span class="icon-caret-right"></span>桌台xx</a></li>        
+    <li><a href="<?php echo U('table/index');?>" target="right"><span class="icon-caret-right"></span>桌台详情</a></li>    
   </ul>  
   <h2>
     <svg class="icon" aria-hidden="true">
