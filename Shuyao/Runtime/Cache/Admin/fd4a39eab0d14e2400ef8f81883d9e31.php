@@ -6,12 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta name="renderer" content="webkit">
 <title></title>
-<link rel="stylesheet" href="/Shuyao/Public/css/pintuer.css">
-<link rel="stylesheet" href="/Shuyao/Public/css/admin.css">
-<!-- <link href="/Shuyao/Public/css/bootstrap.min.css" rel="stylesheet"> -->
-<!-- <link href="/Shuyao/Public/css/bootstrap-fileinput.css" rel="stylesheet"> -->
-<script src="/Shuyao/Public/js/jquery.js"></script>
-<script src="/Shuyao/Public/js/pintuer.js"></script>
+<link rel="stylesheet" href="/cafe/Public/css/pintuer.css">
+<link rel="stylesheet" href="/cafe/Public/css/admin.css">
+<!-- <link href="/cafe/Public/css/bootstrap.min.css" rel="stylesheet"> -->
+<!-- <link href="/cafe/Public/css/bootstrap-fileinput.css" rel="stylesheet"> -->
+<script src="/cafe/Public/js/jquery.js"></script>
+<script src="/cafe/Public/js/pintuer.js"></script>
 <style type="text/css">
 .tu{width: 260px; height: 160px;} 
 </style>
@@ -40,7 +40,7 @@
       </tr>
       <?php if(is_array($data)): foreach($data as $key=>$minfo): ?><tr>
           <td style="text-align:left; padding-left:20px;"><?php echo ($minfo["id"]); ?></td>
-          <td width="10%"><img src="/Shuyao/Uploads/<?php echo ($minfo["minfo_img"]); ?>" alt="" width="70" height="50" /></td>
+          <td width="10%"><img src="/cafe/Uploads/<?php echo ($minfo["minfo_img"]); ?>" alt="" width="70" height="50" /></td>
           <td><?php echo ($minfo["minfo_name"]); ?></td>
           <td><font color="#00CC99"><?php echo ($minfo["mtype_name"]); ?></font></td>
           <td><?php echo ($minfo["minfo_price"]); ?>￥</td>
@@ -80,7 +80,7 @@
         <div class="tu">
           <div  style="width: 200px;height: auto;max-height:150px;">
               <img id='minfo_img' style="width: 100%;height: auto;max-height: 140px;" 
-              src="/Shuyao/Public/images/noimage.png" alt="" />
+              src="/cafe/Public/images/noimage.png" alt="" />
           </div>
         </div>
           <input type="file" class="button bg-blue margin-left" id="image1" style="float:left;">

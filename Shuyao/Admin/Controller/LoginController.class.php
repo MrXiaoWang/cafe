@@ -6,7 +6,6 @@ class LoginController extends Controller {
     public function index(){
         $adm=M("admin");
     	if($_POST){
-
             $yzm = $this->check_verify($_POST["code"],$id=$_SESSION["verify"]);
             if($yzm==false){
                 die("<script>alert('请填写正确的验证码！');history.back(); </script>");
@@ -22,6 +21,13 @@ class LoginController extends Controller {
     		if(count($result)>0){
     			$_SESSION["id"]=$result[0];//记录登录人的id
     			$_SESSION["adm_name"]=$_POST["adm_name"];//记录登录人的名字
+                //得到登录的ip主机地址
+                $ip = $_SERVER["REMOTE_ADDR"];
+                //修改ip地址
+                $data['adm_server']=$ip;
+                $adm->save($data);
+                // echo $data['adm_server'];
+                // die();
     			$this->success("登录成功!",U('Index/index'));
     		}else{
                 $this->error("登录失败!",U('Login/index'));

@@ -12,7 +12,7 @@ class UserController extends CheckController {
     	//导入分页类
     	import('ORG.Util.Page');
     	// 实例化分页类 传入总记录数和每页显示的记录数(25)
-    	$per_page = 3;
+    	$per_page = 5;
     	$page = new \Think\Page($count,$per_page);
 
     	$page->setConfig('header','条记录');

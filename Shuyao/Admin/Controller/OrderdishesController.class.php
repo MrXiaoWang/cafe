@@ -9,7 +9,7 @@ class OrderdishesController extends CheckController {
         //显示
         $count=$dz->where("o_chudan=1")->count();
         //查询满足要求的总记录数
-        $page=new \Think\Page($count,1);
+        $page=new \Think\Page($count,7);
         //实列化分页类
         //导入分页类
         $page->lastSuffix=false;
