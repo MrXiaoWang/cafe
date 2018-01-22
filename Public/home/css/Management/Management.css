@@ -1,0 +1,38 @@
+.file{
+	width: 200px;
+	height: 200px;
+	border: 1px solid gainsboro;
+	margin:20px auto;
+	background: url(../../img/Management/head_03.png) no-repeat center;
+	background-size:100% ;
+	position: relative;
+	z-index: 99;
+
+}
+
+#preview{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.f-uls>li{
+	width:90%;
+	margin: auto;
+	display: -moz-box;
+	display: flex;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	justify-content: space-between;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	border-bottom:1px solid gainsboro ;
+}
+.f-uls>li>span{
+	color: #B00808;
+	font-size: 16px;
+}
+.f-uls>li>a{
+	color: gainsboro;
+	font-size: 14px;
+}

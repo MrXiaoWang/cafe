@@ -1,0 +1,95 @@
+body{
+	background-color: #fff;
+}
+/*公共头部*/
+
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: "微软雅黑";
+}
+
+.mui-bar-nav {
+	background: #b00808;
+}
+
+.mui-bar-nav img {
+	color: #ffffff;
+	width: 43px;
+	height: 30px;
+	padding: 5px 10px;
+	margin-top: 7px;
+}
+
+.Cable {
+	float: left;
+	width: 78%;
+	height: 25px;
+	background: #ba7171;
+	margin-top: 9px;
+	margin-left: 10px;
+	border-radius: 5px 5px 5px 5px;
+}
+
+.Cable img {
+	margin-left: -2px;
+	margin-top: -2px;
+}
+
+.Scan {
+	position: absolute;
+	right: 10px;
+	top: 0;
+}
+
+/*左边列表*/
+.menu-left, .menu-right {
+    position: fixed;
+    left: 0;
+    top: 44px;
+    bottom: 0;
+    overflow-y: auto;
+   /* overflow: hidden;*/
+}
+
+::-webkit-scrollbar{width:0px}
+.menu-left ul li {
+    padding: 0.8rem .8rem;
+    box-sizing: border-box;
+    font-size: 14px;
+    width: 5.6rem;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+/*点击列表样式*/
+.active{
+	color: #B00808;
+	border-right: none !important;
+	border-left: 2px solid #B00808 !important;
+}
+/*右边列表*/
+.menu-right {
+    background: #fff;
+    position: inherit;
+    margin-left: 6.1rem;
+     margin-top: 0.3rem; 
+    right: 0;
+    bottom: 0;
+    left: 8.6rem;
+}
+.mui-row img{
+	width: 100%;
+	padding: 0px 5px;
+}
+.cl-tit{
+	color: #000;
+	text-align: center;
+}
+
+
+.mui-content{
+	background-color: transparent;
+}
+section{
+	    overflow: hidden;
+}

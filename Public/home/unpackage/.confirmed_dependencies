@@ -1,0 +1,49 @@
+{
+	"index.html": {
+		"refer": [
+			"classify.html",
+			"Discount.html",
+			"menu.html",
+			"mine.html",
+			"seach.html"
+		]
+	},
+	"classify.html": {
+		"refer": [
+			"menu.html",
+			"index.html",
+			"myOrder.html"
+		],
+		"resources": [
+			"menu.html"
+		]
+	},
+	"myOrder.html": {
+		"refer": [
+			"mine.html",
+			"menu.html"
+		]
+	},
+	"mine.html": {
+		"refer": [
+			"myOrder.html",
+			"index.html"
+		]
+	},
+	"menu.html": {
+		"refer": [
+			"myOrder.html",
+			"classify.html"
+		]
+	},
+	"Discount.html": {
+		"refer": [
+			"index.html"
+		]
+	},
+	"seach.html": {
+		"refer": [
+			"index.html"
+		]
+	}
+}

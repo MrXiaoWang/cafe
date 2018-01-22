@@ -6,10 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta name="renderer" content="webkit">
 <title></title>
-<link rel="stylesheet" href="/Shuyao/Public/css/pintuer.css">
-<link rel="stylesheet" href="/Shuyao/Public/css/admin.css">
-<script src="/Shuyao/Public/js/jquery.js"></script>
-<script src="/Shuyao/Public/js/pintuer.js"></script>
+<link rel="stylesheet" href="/cafe/Public/css/pintuer.css">
+<link rel="stylesheet" href="/cafe/Public/css/admin.css">
+<script src="/cafe/Public/js/jquery.js"></script>
+<script src="/cafe/Public/js/pintuer.js"></script>
 <style type="text/css">
 .tu{width: 260px; height: 160px;} 
 .tutu{margin-left: -340px; float: left; width: 100px; height: 100px;}
@@ -41,7 +41,7 @@
         <div class="field">
           <input type="file"  name="minfo_img" class="fi"  ><!-- data-validate="required:请选择菜品图" -->
           <?php if($data != null): ?><img class="tutu" width="100" 
-            src="/Shuyao/Uploads/<?php echo ($data["minfo_img"]); ?>">
+            src="/cafe/Uploads/<?php echo ($data["minfo_img"]); ?>">
             <input type="hidden" name="h_minfo_img" value="<?php echo ($data["minfo_img"]); ?>"/><?php endif; ?>
           <div class="tipss">菜品图片仅支持.jpg, .gif, .png, .jpeg 格式</div>
         </div>

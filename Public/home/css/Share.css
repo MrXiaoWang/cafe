@@ -1,0 +1,75 @@
+/*公共头部*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: white;
+}
+
+.mui-bar-nav {
+	background: #b00808;
+}
+
+.mui-bar-nav a {
+	color: white;
+}
+
+.mui-title {
+	color: white;
+}
+
+.mui-bar-nav img {
+	color: #ffffff;
+	width: 43px;
+	height: 30px;
+	padding: 5px 10px;
+	margin-top: 7px;
+}
+
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+	color: #B00808;
+}
+
+.mui-segmented-control.mui-segmented-control-inverted~.mui-slider-progress-bar {
+	background: #B00808;
+}
+
+
+/*底部*/
+
+
+/*.footer {
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: #FFFFFF;
+	z-index: 9999;
+	padding: 3px 10px;
+}
+
+.footer a {
+	z-index: 99999;
+	color: #929292;
+	text-align: center;
+	margin: 2px 10px;
+}
+
+.footer a img {
+	width: 25px;
+	height: 25px;
+}
+
+.footer p {
+	color: #B00808;
+	margin-top: -6px;
+}
+
+.footer {
+	display: -webkit-flex;
+	-webkit-justify-content: space-between;
+}*/

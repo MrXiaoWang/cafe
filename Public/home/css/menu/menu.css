@@ -1,0 +1,120 @@
+/*防止底部被遮住*/
+.mui-slider {
+	position: absolute !important;
+	top: 45px;
+	bottom: 45px;
+}
+
+.mui-slider-group {
+	height: 100%;
+	padding-bottom: 45px;
+}
+
+.mui-control-content {
+	background-color: white;
+	min-height: 215px;
+}
+
+.mui-control-content .mui-loading {
+	margin-top: 50px;
+}
+
+.mui-control-content .mui-loading {
+	margin-top: 50px;
+}
+
+.mui-content {
+	height: 100%;
+}
+
+.mui-slider-progress-bar {
+	margin-left: 50px;
+}
+
+.mui-segmented-control.mui-segmented-control-inverted {
+	width: 70%;
+	margin: auto;
+}
+
+.mui-col-xs-4 {
+	width: 35%;
+}
+
+.box {
+	width: 100%;
+}
+
+.box ul {
+	width: 100%;
+}
+
+.box ul li {
+	list-style: none;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.box ul li>div {
+	float: left;
+	width: 50%;
+	padding: 10px 10px;
+}
+
+.box-a {
+	width: 100%;
+}
+
+.box-a a img {
+	width: 16px;
+	height: 110px;
+}
+
+.pox-b {
+	width: 100%;
+}
+
+.p1 {
+	width: 100%;
+	word-wrap: break-word;
+	overflow: hidden;
+	color: #000000;
+	margin-bottom: auto;
+}
+
+.n-btn {
+	width: 100%;
+}
+
+.n-btn>p {
+	color: #B00808;
+	float: left;
+}
+
+.p2 {
+	font-size: 16px;
+	float: left;
+}
+
+.mst {
+	font-size: 14px;
+	color: #8f8e8e;
+}
+
+.n-btn input {
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 12px;
+	padding-right: 12px;
+	color: white;
+	background: #B00808;
+	float: right;
+	border-radius: 15px;
+	margin-top: 5px;
+	outline: none;
+	font-size: 12px;
+	line-height: 12px;
+	margin: 0px -5px;
+	border: 0px;
+}
+
+

@@ -21,14 +21,20 @@ class LoginController extends Controller {
     		if(count($result)>0){
     			$_SESSION["id"]=$result[0];//记录登录人的id
     			$_SESSION["adm_name"]=$_POST["adm_name"];//记录登录人的名字
+
+    			$this->success("登录成功!",U('Index/index'));
+
                 //得到登录的ip主机地址
                 $ip = $_SERVER["REMOTE_ADDR"];
-                //修改ip地址
-                $data['adm_server']=$ip;
-                $adm->save($data);
-                // echo $data['adm_server'];
+                $_SESSION['adm_server']=$ip;
+                //设置时区
+                date_default_timezone_set("PRC"); 
+                //获取当前时间
+                $timer = date('y-m-d h:i:s', time());
+                // 修改最后一次登录时间
+                $re=$adm->execute("UPDATE `sy_admin` SET `adm_lasttime`='".$timer."',`adm_server`='".$ip."' WHERE id='".$result[0]['id']."'");
+                // var_dump($ip);
                 // die();
-    			$this->success("登录成功!",U('Index/index'));
     		}else{
                 $this->error("登录失败!",U('Login/index'));
             }

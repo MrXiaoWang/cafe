@@ -1,0 +1,52 @@
+.centent {
+	width: 90%;
+	margin: auto;
+}
+
+.a-bin {
+	width: 100%;
+	font-size: 14px;
+	margin: 30px auto;
+	color: black !important;
+}
+
+.input {
+	width: 98%;
+	margin: auto;
+}
+
+.usesrPhone {
+	border-bottom: 1px solid #B00808 !important;
+	border-top: 0px !important;
+	border-left: 0px !important;
+	border-right: 0px !important;
+	border-radius: 0px !important;
+	font-size: 14px !important;
+	width: 100%;
+}
+.A-yzm{
+	width: 60% !important;
+	border-bottom: 1px solid #B00808 !important;
+	border-top: 0px !important;
+	border-left: 0px !important;
+	border-right: 0px !important;
+	border-radius: 0px !important;
+	font-size: 14px !important;
+}
+.n-btn{
+	width: 38%;
+	height: 37px;
+	color: white !important;
+	background: #B00808 !important;
+	border: 0px;
+	margin-top: 3px !important;
+	border-radius: 5px;
+	}
+.n-btnys{
+	width: 100%;
+	height: 38px !important;
+	color: white !important; 
+	background: #B00808 !important;
+	margin-top: 40px;
+	border-radius: 5px;
+}

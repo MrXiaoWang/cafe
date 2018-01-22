@@ -1,0 +1,73 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	background-color: #fff;
+}
+.mui-content{
+	background-color: #fff;
+}
+/*头部*/
+.sea{
+	margin-top: -5px;
+	margin-left: -5px;
+}
+.mui-bar .mui-title{
+	margin: 4px 15px;
+	box-sizing: border-box;
+	line-height: 36px;
+	background-color: #fff;
+	border-radius: 25px;
+	font-size: 16px;
+}
+input[type=text]{
+	width: 69%;
+	padding: 0px 5px;
+	margin-bottom: 0;
+	height: 33px;
+	border: none;
+	border-radius: 0px;
+	font-size: 15px;
+	border-left: 1px solid #ccc;
+}
+/*热门搜索*/
+.seach-top{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+}
+.sea-yuan{
+	display: block;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	padding: 5px;
+}
+.seach-top span{
+	float: left;
+}
+.mui-row{
+	text-align: center;
+}
+.mui-row div{
+	padding:5px;
+	margin: 10px 0px;
+	border-radius: 20px;
+}
+.mui-row div span{
+	border: 1px solid #ccc;
+	padding: 6px 25px;
+	border-radius: 20px;
+}
+.seach-all{
+	border: 1px solid #B00808;
+	border-radius: 15px;
+	width: 50%;
+	padding: 10px 15px;
+	text-align: center;
+	margin:30px auto;
+}
+
+
+
+
