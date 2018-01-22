@@ -61,6 +61,10 @@ body{
     text-align: center;
     border: 1px solid #ccc;
 }
+.menu-left ul li a{
+	color: black;
+}
+
 /*点击列表样式*/
 .active{
 	color: #B00808;

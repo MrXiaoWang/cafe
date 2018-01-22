@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="__PUBLIC__/home/js/mui.min.js"></script>
+    <link href="__PUBLIC__/home/css/mui.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="__PUBLIC__/home/css/classify/classify.css" />
+	<link rel="stylesheet" href="__PUBLIC__/home/css/footer/footer.css" />
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<section class="menu-right padding-all j-content">
+		<div class="mui-row">
+		<foreach name="data1" item="tj">
+			<div class="mui-col-xs-4 mui-col-lg-4">
+				<a href="{:U('Classifi/detail')}?id={$tj.id}" target="_blank">
+					<img src="__UPLOAD__/{$tj.minfo_img}" />
+					<p class="cl-tit">{$tj.minfo_name}</p>
+				</a>
+			</div>
+		</foreach>	
+		</div>
+	</section>
+</body>
+</html>
