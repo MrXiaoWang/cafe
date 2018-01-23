@@ -27,6 +27,12 @@
   </div>
   <div class="head-l">
   <a class="button button-little bg-green" href="" target="_blank"><span class="icon-home"></span> 前台首页</a> &nbsp;&nbsp;<a class="button button-little bg-red" href="<?php echo U('Login/logout');?>"><span class="icon-power-off"></span> 退出登录</a> </div>
+
+  <div style="width: 600px;color: white;height: 50px; float: left; margin-left: 300px; 
+    line-height: 45px; font-size: 20px; margin-top: 10px;"> 
+  <span style="margin-right: 50px; margin-left: 20px;">管理员：<?php echo ($adm_name); ?></span> 
+  <span>登陆时间：<?php echo ($adm_lasttime); ?></span>
+  </div>
 </div>
 <div class="leftnav">
   <div class="leftnav-title"><strong>列表</strong></div>

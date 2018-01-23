@@ -87,7 +87,7 @@ class MenuController extends CheckController {
         //表格
         $data=$minfo->field('i.id,i.minfo_img,i.minfo_name,t.mtype_name,i.minfo_price')->table('sy_menuinfo i,sy_menutype t')->where('i.mtype_id=t.mtype_id')->limit($Page->firstRow.','.$Page->listRows)->order("i.id")->select();
         $data1=$mtype->field('mtype_id,mtype_name')->select();
-        // dump($data);
+        // dump($data2);
         // die();
         //赋值
         $this->assign('data',$data);
@@ -185,8 +185,28 @@ class MenuController extends CheckController {
         }
     }
 
-    // //酒水管理
-    // public function jiushui(){
-    //     $this->display();
-    // }
+    //菜品模糊查询
+    public  function  menuinfomohu(){
+        $menu=M("menuinfo");
+        if($_POST){
+            $name=$_POST["keywords"];//根据菜品名称查询菜
+            $data=$menu->where("minfo_name like '%$name%'")->select();
+            $this->assign("data",$data);//赋值必须跟查询赋值的字段一样
+            $this->display("menu");
+        }
+    }
+
+    //菜品类型模糊查询
+    public  function  menutypemohu(){
+        $menu=M("menutype");
+        if($_POST){
+            $name=$_POST["keywords"];//根据菜品名称查询菜
+            $data=$menu->where("mtype_name like '%$name%'")->select();
+            $this->assign("data",$data);//赋值必须跟查询赋值的字段一样
+            $this->display("type");
+        }
+    }
+
+
+    
 }

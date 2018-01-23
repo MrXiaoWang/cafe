@@ -21,7 +21,9 @@ class LoginController extends Controller {
     		if(count($result)>0){
     			$_SESSION["id"]=$result[0];//记录登录人的id
     			$_SESSION["adm_name"]=$_POST["adm_name"];//记录登录人的名字
-
+                $_SESSION["adm_lasttime"]=$result[0]['adm_lasttime'];
+                // var_dump($_SESSION["adm_lasttime"]);
+                // die();
     			$this->success("登录成功!",U('Index/index'));
 
                 //得到登录的ip主机地址

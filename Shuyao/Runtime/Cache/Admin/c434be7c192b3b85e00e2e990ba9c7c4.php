@@ -11,36 +11,22 @@
 <script src="/cafe/Public/js/jquery.js"></script>
 <script src="/cafe/Public/js/pintuer.js"></script>
 
-<!-- 判断菜品类型是否重复 -->
-<!-- <script type="text/javascript">
-    $(document).ready(function(){
-      //点击事件
-      $("#submit").click(function(){
-        mtype_name=$("#mtype_name").val();//获得菜品类型文本框的值
-        $url = "<?php echo U('Menu/addtype');?>";
-        $.ajax({
-          type:"POST",
-          url:$url,
-          data:{mtype_name:mtype_name},
-          dataType:"json",
-          success:function(json){
-            alert(json);
-            //判断是否成功
-            // if(json.ok==1)";
-            // }else
-          }
-        });
-      })
-    });
-</script> -->
-
 </head>
 
 <body>
 <div class="panel admin-panel">
   <div class="panel-head"><strong class="icon-reorder"> 商品类型列表</strong></div>
   <div class="padding border-bottom">
-    <button type="button" class="button border-yellow" onclick="window.location.href='#add'"><span class="icon-plus-square-o"></span> 添加商品类型</button>
+  <ul class="search" style="padding-left:10px;">
+  <li>
+    <button type="button" class="button border-yellow" onclick="window.location.href='#add'"><span class="icon-plus-square-o"></span> 添加商品类型</button></li>
+    <form action="<?php echo U('Menu/menutypemohu');?>" method='post'>
+        <li style="margin-left: 600px; width: 400px; float: left; margin-top: -40px;">
+        <input type="text" placeholder="请输入搜索类型名称" name="keywords" class="input" style="width:250px; line-height:17px;display:inline-block" />
+        <input type="submit" class="button border-main icon-search" value="输入并搜索"></li>
+        </form>
+</ul>
+
   </div>
   <table class="table table-hover text-center">
     <tr>

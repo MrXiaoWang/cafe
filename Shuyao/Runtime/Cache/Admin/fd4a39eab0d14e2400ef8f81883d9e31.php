@@ -26,7 +26,11 @@
         <a class="button border-main icon-plus-square-o" onclick="window.location.href='#add'" > 添加内容
         </a> 
         </li>
-        
+        <form action="<?php echo U('Menu/menuinfomohu');?>" method='post'>
+        <li style="margin-left: 600px;">
+          <input type="text" placeholder="请输入搜索菜品名称" name="keywords" class="input" style="width:250px; line-height:17px;display:inline-block" />
+        <input type="submit" class="button border-main icon-search" value="输入并搜索"></li>
+        </form>
       </ul>
     </div>
     <table class="table table-hover text-center">
