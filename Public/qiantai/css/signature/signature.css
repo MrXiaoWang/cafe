@@ -1,0 +1,46 @@
+.area {
+	width: 80%;
+	margin: 40px auto !important;
+	color: black;
+		position: relative;
+}
+
+.area>textarea {
+	width: 100%;
+	margin: auto !important;
+	height: 100px;
+	background: #f2d5d4;
+	color: black;
+	border-radius: 5px;
+	font-size: 14px;
+	border: 0px;
+
+}
+
+.b-btn {
+	width: 90%;
+	margin: 30px auto !important;
+}
+
+.btnYes {
+	width: 100%;
+	color: white !important;
+	font-size: 18px !important;
+	height: 38px;
+	background: #B00808 !important;
+	border-radius: 5px;
+	outline:none !important;
+	border: 0px !important;
+}
+
+.jishu {
+position: absolute;
+	width: 90%;
+	margin: auto;
+	text-align: right;
+	font-size: 10px;
+	z-index: 999;
+	bottom: 10px;
+	right: 5px;
+	color: darkgray;
+}

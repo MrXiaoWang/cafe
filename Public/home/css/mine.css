@@ -1,3 +1,6 @@
+html{
+	font-family: sans-serif !important;
+}
 /*头部*/
 .wod{
 	width: 44px;
@@ -32,6 +35,8 @@
 	border-radius: 50%;
 	margin: auto;
 	overflow: hidden;
+	vertical-align: middle;
+	text-align: center;
 }
 .user-pic img{
 	width: 100%;

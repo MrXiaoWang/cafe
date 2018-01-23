@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>登录,注册</title>
+		<script src="__PUBLIC__/home/js/mui.min.js"></script>
+		<link href="__PUBLIC__/home/css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="__PUBLIC__/home/css/login/login.css" />
+		<link rel="stylesheet" href="__PUBLIC__/home/css/public.css" />
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+	</head>
+
+	<body>
+
+		<div class="mui-content">
+			<!--登录注册切换-->
+			<div class="box">
+				<div class="d-btnlu">
+					<ul>
+						<li>登录</li>
+						<li>注册</li>
+					</ul>
+				</div>
+				<!--登录-->
+				<div class="denglu">
+					<!--输入框-->
+					<form action="{:U('Login/index')}" method="post">
+						<div class="input input-username ">
+							<input type="text" class="userName d_username" name="adm_name" placeholder="请输入用户名/手机号" />
+						</div>
+						<div class="input input-userPwd ">
+							<input type="password" class="userPwd d_userpwd" name="adm_pwd" placeholder="请输入密码" />
+						</div>
+						<!--登录按钮-->
+						<div class="d-btn ">
+							<input type="submit" value="登录" class="b-yes" />
+						</div>
+						<!--第三方登录按钮-->
+						<div class="three mui-text-center">
+							<!--微信-->
+							<img src="__PUBLIC__/home/img/login/11_09.png" />
+							<img src="__PUBLIC__/home/img/login/11_11.png" />
+							<img src="__PUBLIC__/home/img/login/11_13.png" />
+						</div>
+					</form>
+				</div>
+
+				<!--注册-->
+
+				<div class="zhuce">
+					<div class="input input-username">
+						<input type="text" class="userName z_username" placeholder="请输入手机号" />
+					</div>
+					<div class="input input-userPwd">
+						<input type="text" class="userPwd z_userpwd" placeholder="请输入密码" />
+					</div>
+					<!--获取验证码-->
+					<div class="h-YZM">
+						<input type="text" placeholder="请输入验证码" class="yzm" />
+						<input type="button" value="获取验证码" class="hq" />
+					</div>
+					<!--登录按钮-->
+					<div class="d-btn">
+						<input type="button" value="注册" class="z_btn"/>
+					</div>
+				</div>
+			</div>
+	</body>
+	<script type="text/javascript" src="__PUBLIC__/home/js/jquery-1.11.0.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/home/js/login/login.js"></script>
+
+</html>

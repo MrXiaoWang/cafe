@@ -1,9 +1,11 @@
 *{
 	margin: 0px;
 	padding: 0px;
+	font-family:  sans-serif !important;;
 }
 .mui-bar>a{
 	color:white !important; 
+
 }
 body,.mui-content{
 	background: white ;
@@ -19,9 +21,7 @@ h1{
 	-webkit-box-shadow:none;
 	box-shadow:none;
 }
-.mui-active{
-	background: white !important; 
-}
+
 
 .wod,.manage{
 	width: 44px;
@@ -31,4 +31,7 @@ h1{
 }
 i{
 	font-style: normal;
+}
+.mui-content{
+	margin-bottom: 50px !important;
 }

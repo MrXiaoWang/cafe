@@ -50,3 +50,18 @@
 	margin-top: 40px;
 	border-radius: 5px;
 }
+body,html,.mui-content{
+	background: white !important;
+}
+header {
+	background: #B00808 !important;
+}
+
+.mui-pull-left {
+	color: white !important;
+}
+
+h1 {
+	font-size: 20px !important;
+	color: white !important;
+}

@@ -32,7 +32,7 @@
 .choose{
 	width: 25px;
 	height: 25px;
-	background: url(../img/icon/gou.png) no-repeat center;
+	background: url(../../img/icon/gou.png) no-repeat center;
 	background-size: 100% 100%;
 }
 .dd-right .dd-info-left{
@@ -86,6 +86,7 @@
 	border: 1px solid #a3a3a3;
 	float: left;
 	margin-top: 5px;
+	color: #a3a3a3;
 }
 .dd-bottom-right input[type=text]{
 	width: 45px;
@@ -184,5 +185,24 @@
 	color: #3a3a3a;
 }
 .mui-popover.mui-popover-action .mui-table-view{
-	margin: 30px 10px;
+	margin: 100px 10px;
+}
+header {
+	background: #B00808 !important;
+}
+
+.mui-pull-left {
+	color: white !important;
+}
+
+h1 {
+	font-size: 20px !important;
+	color: white !important;
+}
+body,html,.mui-content{
+	background: white !important;
+}
+.mui-pull-right{
+	color: white !important;
+	line-height:50px;
 }

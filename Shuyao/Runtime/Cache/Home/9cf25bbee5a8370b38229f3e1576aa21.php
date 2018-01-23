@@ -17,7 +17,9 @@
 		<div class="mui-row">
 		<?php if(is_array($data1)): foreach($data1 as $key=>$tj): ?><div class="mui-col-xs-4 mui-col-lg-4">
 				<a href="<?php echo U('Classifi/detail');?>?id=<?php echo ($tj["id"]); ?>" target="_blank">
-					<img src="/cafe/Uploads/<?php echo ($tj["minfo_img"]); ?>" />
+					<div class="img_pic">
+						<img src="/cafe/Uploads/<?php echo ($tj["minfo_img"]); ?>" />
+					</div>
 					<p class="cl-tit"><?php echo ($tj["minfo_name"]); ?></p>
 				</a>
 			</div><?php endforeach; endif; ?>	

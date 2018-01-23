@@ -5,45 +5,325 @@
 			"Discount.html",
 			"menu.html",
 			"mine.html",
-			"seach.html"
+			"seach.html",
+			"detail.html",
+			"myOrder.html",
+			"Ranking.html"
+		],
+		"resources": [
+			"images/order.png",
+			"img/home/2.gif",
+			"img/home/start.png",
+			"css/public.css",
+			"img/home/Scan.png",
+			"css/icons-extra.css",
+			"img/home/7.gif",
+			"img/home/1.gif",
+			"img/home/5.gif",
+			"img/home/banner-6.jpg",
+			"js/mui.min.js",
+			"img/home/3.gif",
+			"img/recommended/a7311388aaf2a7b25eb3c5efb23dba64cc0e3ed02be6a-9NjQnf_fw658.jpg",
+			"css/Home/home.css",
+			"img/home/banner-5.jpg",
+			"css/footer/footer.css",
+			"images/addcart.png",
+			"img/home/banner-4.jpg",
+			"images/edit.png",
+			"img/home/banner1.png",
+			"img/home/8.png",
+			"img/home/banner-3.jpg",
+			"img/home/6.gif",
+			"img/footer/home.png",
+			"css/mui.min.css",
+			"images/personalcenter.png",
+			"img/home/Cable.png",
+			"img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg",
+			"img/home/4.gif",
+			"seach.html",
+			"Discount.html",
+			"detail.html",
+			"mine.html",
+			"myOrder.html",
+			"classify.html",
+			"Ranking.html",
+			"menu.html"
 		]
 	},
 	"classify.html": {
 		"refer": [
 			"menu.html",
 			"index.html",
-			"myOrder.html"
+			"myOrder.html",
+			"order.html",
+			"mine.html",
+			"seach.html",
+			"detail.html"
 		],
 		"resources": [
-			"menu.html"
+			"menu.html",
+			"js/classify/classify.js",
+			"index.html",
+			"img/footer/fenlei.png",
+			"img/cai/s1.jpg",
+			"css/classify/classify.css",
+			"img/home/Cable.png",
+			"css/public.css",
+			"img/home/Scan.png",
+			"1.html",
+			"order.html",
+			"mine.html",
+			"js/jquery-2.1.0.js",
+			"images/home.png",
+			"2.html",
+			"seach.html",
+			"detail.html",
+			"images/order.png",
+			"css/footer/footer.css",
+			"images/addcart.png",
+			"myOrder.html",
+			"images/personalcenter.png"
 		]
 	},
 	"myOrder.html": {
 		"refer": [
 			"mine.html",
-			"menu.html"
+			"menu.html",
+			"order.html",
+			"classify.html",
+			"index.html"
+		],
+		"resources": [
+			"mine.html",
+			"css/myorder/myOrder.css",
+			"img/footer/shopping.png",
+			"js/myorder/myorder.js",
+			"img/cai/s8.jpg",
+			"order.html",
+			"images/order.png",
+			"css/footer/footer.css",
+			"images/edit.png",
+			"images/personalcenter.png",
+			"images/home.png",
+			"js/jquery-2.1.0.js",
+			"menu.html",
+			"fonts/mui.ttf",
+			"classify.html",
+			"index.html"
 		]
 	},
 	"mine.html": {
 		"refer": [
 			"myOrder.html",
-			"index.html"
+			"index.html",
+			"order.html",
+			"menu.html",
+			"Management.html",
+			"classify.html",
+			"Ranking.html"
+		],
+		"resources": [
+			"css/mine.css",
+			"img/icon/tb2.png",
+			"img/footer/my.png",
+			"img/icon/tb3.png",
+			"img/icon/tb1.png",
+			"img/icon/shezhi.png",
+			"order.html",
+			"img/icon/tb5.png",
+			"images/home.png",
+			"img/touxiang.png",
+			"img/icon/tb4.png",
+			"css/footer/footer.css",
+			"images/order.png",
+			"images/addcart.png",
+			"images/edit.png",
+			"menu.html",
+			"myOrder.html",
+			"Management.html",
+			"index.html",
+			"classify.html",
+			"Ranking.html",
+			"fonts/mui.ttf",
+			"img/cai/s7.jpg",
+			"js/mui.min.js",
+			"css/mui.min.css"
 		]
 	},
 	"menu.html": {
 		"refer": [
 			"myOrder.html",
-			"classify.html"
+			"classify.html",
+			"order.html",
+			"mine.html",
+			"index.html"
+		],
+		"resources": [
+			"js/menu/menu.js",
+			"css/Share.css",
+			"order.html",
+			"img/Menu/1.png",
+			"js/Share.js",
+			"images/personalcenter.png",
+			"img/footer/caipu.png",
+			"css/menu/menu.css",
+			"mine.html",
+			"classify.html",
+			"js/jquery-1.11.0.js",
+			"images/home.png",
+			"myOrder.html",
+			"index.html",
+			"css/footer/footer.css",
+			"images/addcart.png",
+			"fonts/mui.ttf",
+			"images/edit.png",
+			"js/mui.min.js",
+			"css/mui.min.css"
 		]
 	},
 	"Discount.html": {
 		"refer": [
 			"index.html"
+		],
+		"resources": [
+			"index.html",
+			"img/recommended/15e3fdc1969e76f661d2e9b1edb1e83fe79b1398d5532-q6mc9A_fw658.png",
+			"css/Share.css",
+			"img/Discount/2.jpg",
+			"fonts/mui.ttf",
+			"css/discount/Discount.css",
+			"img/Discount/4.jpg"
 		]
 	},
 	"seach.html": {
 		"refer": [
-			"index.html"
+			"index.html",
+			"classify.html"
+		],
+		"resources": [
+			"img/icon/seach.png",
+			"css/seach/seach.css",
+			"img/icon/huan.png",
+			"index.html",
+			"js/mui.min.js",
+			"classify.html"
+		]
+	},
+	"detail.html": {
+		"resources": [
+			"index.html",
+			"img/cai/s1.jpg",
+			"img/cai/s2.jpg",
+			"img/cai/s9.jpg",
+			"css/detail/detail.css",
+			"img/cai/s5.jpg",
+			"css/xiangqing.css",
+			"img/cai/s6.jpg",
+			"img/cai/s3.jpg",
+			"img/cai/s4.jpg",
+			"classify.html",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf",
+			"order.html"
+		],
+		"refer": [
+			"index.html",
+			"classify.html",
+			"order.html"
+		]
+	},
+	"order.html": {
+		"resources": [
+			"js/jquery-1.11.0.js",
+			"img/icon/weixin.png",
+			"img/icon/zhhifubao.png",
+			"js/order/order.js",
+			"css/order/order.css",
+			"mine.html",
+			"img/icon/gou.png",
+			"img/cai/s7.jpg",
+			"js/jquery-2.1.0.js",
+			"img/icon/qq.png",
+			"menu.html",
+			"classify.html",
+			"images/order.png",
+			"fonts/mui.ttf",
+			"images/edit.png",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"images/personalcenter.png",
+			"images/home.png",
+			"img/footer/shopping.png",
+			"myOrder.html",
+			"detail.html"
+		],
+		"refer": [
+			"mine.html",
+			"menu.html",
+			"classify.html",
+			"myOrder.html",
+			"detail.html"
+		]
+	},
+	"Management.html": {
+		"resources": [
+			"css/Management/Management.css",
+			"img/Management/head_03.png",
+			"Nickname.html",
+			"mine.html",
+			"js/jquery-1.11.0.js",
+			"signature.html",
+			"Modifypassword.html"
+		],
+		"refer": [
+			"Nickname.html",
+			"mine.html",
+			"signature.html",
+			"Modifypassword.html"
+		]
+	},
+	"Nickname.html": {
+		"resources": [
+			"css/Nickname/Nickname.css",
+			"Management.html"
+		],
+		"refer": [
+			"Management.html"
+		]
+	},
+	"Ranking.html": {
+		"resources": [
+			"css/Share.css",
+			"img/1.png",
+			"js/Share.js",
+			"css/Ranking/Ranking.css",
+			"img/Ranking/1.png",
+			"index.html",
+			"mine.html"
+		],
+		"refer": [
+			"index.html",
+			"mine.html"
+		]
+	},
+	"signature.html": {
+		"resources": [
+			"css/signature/signature.css",
+			"Management.html"
+		],
+		"refer": [
+			"Management.html"
+		]
+	},
+	"Modifypassword.html": {
+		"resources": [
+			"Management.html",
+			"css/Modifypassword/Modifypassword.css",
+			"js/Modifypassword/Modifypassword.js"
+		],
+		"refer": [
+			"Management.html"
 		]
 	}
 }

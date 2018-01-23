@@ -1,19 +1,31 @@
 .file{
 	width: 200px;
 	height: 200px;
-	border: 1px solid gainsboro;
 	margin:20px auto;
 	background: url(../../img/Management/head_03.png) no-repeat center;
 	background-size:100% ;
 	position: relative;
 	z-index: 99;
+	border: 0px;
 
 }
-
+*{
+	margin: 0;
+	padding: 0;
+}
 #preview{
 	position: absolute;
 	top: 0px;
 	left: 0px;
+}
+#huan{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	border-radius: 5px;
+	color: white;
+	border: 0px;
+	background:  #B00808;
 }
 .f-uls>li{
 	width:90%;
@@ -26,7 +38,7 @@
 	justify-content: space-between;
 	padding-top: 14px;
 	padding-bottom: 14px;
-	border-bottom:1px solid gainsboro ;
+	border-bottom:1px solid gainsboro;
 }
 .f-uls>li>span{
 	color: #B00808;
@@ -35,4 +47,20 @@
 .f-uls>li>a{
 	color: gainsboro;
 	font-size: 14px;
+}
+body,html,.mui-content{
+	background: white !important;
+	font-family: sans-serif;
+}
+header {
+	background: #B00808 !important;
+}
+
+.mui-pull-left {
+	color: white !important;
+}
+
+h1 {
+	font-size: 20px !important;
+	color: white !important;
 }

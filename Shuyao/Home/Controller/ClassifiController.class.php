@@ -34,6 +34,7 @@ class ClassifiController extends Controller {
        //推荐菜品查询
         $tj=M('menuinfo');
         $data1=$tj->where('minfo_istuijian=1')->select();
+        // echo json_encode()
         $this->assign('data1',$data1);
         $this->display();
     }
@@ -42,7 +43,7 @@ class ClassifiController extends Controller {
     public function detail($id){
         //根据菜品id显示菜品详情
         $m=M('menuinfo');
-        $data=$m->field('minfo_name,minfo_img,minfo_price,mtype_id,minfo_remark')->select($id);
+        $data=$m->field('minfo_name,minfo_img,minfo_price,minfo_original,mtype_id,minfo_remark')->select($id);
         // dump($data);
         // die();
         $this->assign('data',$data[0]);

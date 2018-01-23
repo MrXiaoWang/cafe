@@ -22,3 +22,18 @@ font-size: 14PX;
 	background: #B00808 !important;
 	border-radius: 5px;
 }
+header {
+	background: #B00808 !important;
+}
+
+.mui-pull-left {
+	color: white !important;
+}
+
+h1 {
+	font-size: 20px !important;
+	color: white !important;
+}
+body,html,.mui-content{
+	background: white !important;
+}

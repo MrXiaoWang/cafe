@@ -1,0 +1,84 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>账号管理</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="/cafe/Public/home/css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="/cafe/Public/home/css/public.css" />
+		<link rel="stylesheet" href="/cafe/Public/home/css/Management/Management.css" />
+	</head>
+
+	<body>
+		<script src="/cafe/Public/home/js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">账号管理</h1>
+		</header>
+
+		<div class="mui-content">
+			<!--头像框-->
+			<form id="form1" runat="server" method="post" action="<?php echo U('Our/file');?>">
+				<div class="file" id="img_file">
+					<input type="file" class="file" id="file" style="opacity: 0;" />
+					<img src='/cafe/Public<?php echo ($result["u_img"]); ?>' id="preview" width="200" height="200">
+				</div>
+				<!--ul-->
+				<ul class="f-uls">
+					<li>
+						<span>昵称 </span>
+						<a href="nickname.html">修改昵称 &nbsp;></a>
+					</li>
+					<li>
+						<span>出生日期</span>
+						<a href="birthday.html">选择日期 &nbsp;></a>
+					</li>
+					<li>
+						<span>个性签名</span>
+						<a href="signature.html">未填写 &nbsp;></a>
+					</li>
+					<li>
+						<span>邮箱</span>
+						<a href="mailbox.html">未填写 &nbsp;></a>
+					</li>
+					<li>
+						<span>修改密码</span>
+						<a href="modifypassword.html">保密 &nbsp;></a>
+					</li>
+				</ul>
+			</form>
+		</div>
+
+	</body>
+	<script type="text/javascript" src="/cafe/Public/home/js/jquery-1.11.0.js"></script>
+	<script>
+		$(function() {
+			$("#file").change(function() {
+				var $file = $(this);
+				var fileObj = $file[0];
+				var windowURL = window.URL || window.webkitURL;
+				var dataURL;
+				var $img = $("#preview");
+
+				if(fileObj && fileObj.files && fileObj.files[0]) {
+					dataURL = windowURL.createObjectURL(fileObj.files[0]);
+					$img.attr('src', dataURL);
+				} else {
+					dataURL = $file.val();
+					var imgObj = document.getElementById("preview");
+					// 两个坑:
+					// 1、在设置filter属性时，元素必须已经存在在DOM树中，动态创建的Node，也需要在设置属性前加入到DOM中，先设置属性在加入，无效；
+					// 2、src属性需要像下面的方式添加，上面的两种方式添加，无效；
+					imgObj.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+					imgObj.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = dataURL;
+
+				}
+			});
+		});
+	</script>
+
+</html>

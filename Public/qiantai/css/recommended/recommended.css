@@ -1,0 +1,102 @@
+.banner {
+	width: 100%;
+	background: url(../../img/home/banner-3.jpg) no-repeat center;
+	height: 200px;
+	background-size: 100%;
+}
+.tuijian {
+	width: 100%;
+	height: 50px;
+	position: relative;
+}
+li {
+	list-style: none;
+}
+.tuijian>ul {
+	display: -moz-box;
+	display: flex;
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	width: 75%;
+	margin: auto;
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	transform: translate(-50%);
+}
+.tuijian>ul>li {
+	width: 50%;
+	border-bottom: 2px solid lightgrey;
+}
+.tuijian>ul>li>a {
+	text-align: center;
+	width: 100% !important;
+	color: black;
+	display: block;
+}
+.b{
+	border-bottom: 2px solid #b00808 !important;
+}
+.a{
+		color: #b00808 !important;
+}
+.p-box>ul{
+	display:flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: -webkit-flex;
+	justify-content: space-between;
+	
+	width: 95%;
+	margin:20px auto;
+}
+.p-box>ul>li{
+	width: 48.8%;
+
+}
+.p-big>img{
+	width:95%;
+	height: 110px;
+}
+.n-pone,.n-ptwo{
+	width: 95%;
+	display:flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: -webkit-flex;
+	justify-content: space-between;
+}
+.x-name{
+	font-size: 14px;
+	color: black;
+}
+.x-money{
+font-size: 10px;
+	color: #b00808;
+}
+.n-ptwo{
+	font-size: 10px;
+	color: darkgray;
+	margin-top: 5px;
+}
+.n-ptwo>a{
+	color:darkgray ;
+}
+.n-btn>input{
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 12px;
+	padding-right: 12px;
+	color: white;
+	background: #B00808;
+	float: right;
+	border-radius: 15px;
+	margin-top: 5px;
+	outline: none;
+	font-size: 12px;
+	line-height: 12px;
+	border: 0px;
+}

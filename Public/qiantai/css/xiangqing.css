@@ -1,0 +1,23 @@
+/*头部*/
+header.mui-bar{
+	background-color: #b00808 !important;
+}
+.mui-bar a{
+	color: #fff;
+}
+.mui-bar h1{
+	color: #fff;
+	font-size: 20px;
+}
+.wod,.manage{
+	width: 44px;
+	height: 44px;
+	line-height: 44px;
+	text-align: center;
+}
+i{
+	font-style: normal;
+}
+/*body{
+	background-color: #fff;
+}*/

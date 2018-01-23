@@ -31,7 +31,7 @@
   <div style="width: 600px;color: white;height: 50px; float: left; margin-left: 300px; 
     line-height: 45px; font-size: 20px; margin-top: 10px;"> 
   <span style="margin-right: 50px; margin-left: 20px;">管理员：<?php echo ($adm_name); ?></span> 
-  <span>登陆时间：<?php echo ($adm_lasttime); ?></span>
+  <span>上次登陆时间：<?php echo ($adm_lasttime); ?></span>
   </div>
 </div>
 <div class="leftnav">
@@ -91,6 +91,16 @@
     <svg class="icon" aria-hidden="true">
       <use xlink:href="#icon-id-95"></use>
   </svg>
+  报表
+   </h2>
+  <ul>
+    <li><a href="<?php echo U('Statement/Statement');?>" target="right"><span class="icon-caret-right"></span>单月报表</a></li>      
+  </ul> 
+  <h2>
+    <svg class="icon" aria-hidden="true">
+      <use xlink:href="#icon-id-95"></use>
+  </svg>
+  
     系统管理
   </h2>
   <ul>

@@ -71,6 +71,16 @@
 
       <div class="form-group">
         <div class="label">
+          <label>菜品原价：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" name="minfo_original" value="<?php echo ($data["minfo_original"]); ?>"  data-validate="required:,number:菜品原价必须为数字" />
+          <div class="tips"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
           <label>菜品数量：</label>
         </div>
         <div class="field">
@@ -78,6 +88,43 @@
           <div class="tips"></div>
         </div>
       </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>是否推荐：</label>
+        </div>
+        <div class="field">
+          <div class="button-group radio">
+          <label class="button active">
+            <span class="icon icon-check"></span>             
+              <input name="minfo_istuijian" value="1" type="radio" checked="checked">是             
+          </label>             
+        
+          <label class="button active"><span class="icon icon-times"></span>            
+              <input name="minfo_istuijian" value="0"  type="radio" checked="checked">否
+          </label>         
+           </div>       
+        </div>
+     </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>是否新菜：</label>
+        </div>
+        <div class="field">
+          <div class="button-group radio">
+          
+          <label class="button active">
+            <span class="icon icon-check"></span>             
+              <input name="minfo_isnew" value="1" type="radio" checked="checked">是             
+          </label>             
+        
+          <label class="button active"><span class="icon icon-times"></span>            
+              <input name="minfo_isnew" value="0"  type="radio" checked="checked">否
+          </label>         
+           </div>       
+        </div>
+     </div>
       
       <div class="form-group">
         <div class="label">

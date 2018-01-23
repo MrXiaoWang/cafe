@@ -37,7 +37,7 @@
 		    			
 		    		</div>
 		    		<div class="bottom-right mui-pull-right">
-		    			<span>原价：</span><s><i>￥</i><span class="det-Oldprice">22</span></s>
+		    			<span>原价：</span><s><i>￥</i><span class="det-Oldprice"><?php echo ($data["minfo_original"]); ?></span></s>
 		    		</div>
 		    	</div>
 		    </div>
@@ -49,7 +49,7 @@
 		    		<p class="liao-content"><?php echo ($data["minfo_remark"]); ?></p>
 		    	</div>
 		    	<!--制作方法-->
-		    	<div class="make">
+		    	<!-- <div class="make">
 		    		<p class="make-tit">制作：</p>
 		    		<div class="make-step">
 		    			<p class="step-div">
@@ -100,7 +100,7 @@
 							</div>
 		    			</p>
 		    		</div>
-		    	</div>
+		    	</div> -->
 		    </div>
 	    </div>
 	</div>

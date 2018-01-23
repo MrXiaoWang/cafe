@@ -13,11 +13,15 @@
 			mui.init();
 		</script>
 	</head>
-<style>
-	html,body,.mui-content,.box{
-		height: 100%;
-	}
-</style>
+	<style>
+		html,
+		body,
+		.mui-content,
+		.box,.j-content{
+			height: 100%;
+		}
+	</style>
+
 	<body>
 		<!--头部-->
 		<header class="mui-bar mui-bar-nav">
@@ -31,13 +35,13 @@
 			</div>
 
 		</header>
-		<div class="mui-content" style="height: 100%;">
-			<div class="box">
+		<div class="mui-content" style="height: 100%; margin-bottom: 50px !important;">
+			<div class="box" style="margin-bottom: 50px !important;">
 				<aside>
 					<!--左列表-->
 					<div class="menu-left scrollbar-none r-line" id="sidebar" style="width: 25%;">
 						<ul>
-							<li class="active"><a style="color: #B00808" href="{:U('Classifi/index')}">推荐</a></li>
+							<li class="active"><a href="{:U('Classifi/index')}">推荐</a></li>
 							<!-- 循环查询菜品分类开始 -->
 							<foreach name="data" item="cls">
 							<li><a target="right" href="{:U('Classifi/menuinfo')}?id={$cls.mtype_id}">{$cls.mtype_name}</a></li>
@@ -49,29 +53,14 @@
 				<!--右内容-->
 				<!--推荐-->
 				<iframe src="tuijian.html" name="right"  width="100%" height="100% " class="ifam"></iframe>
+
 			</div>
 		</div>
 		<!--<iframe src="footer.html"  width="100%" frameborder="0" height="49px" style="position: fixed; bottom: 0px;"></iframe>-->
 		<!--底部-->
-		<div class="footer">
-			<a href="{:U('Index/index')}"><img src="__PUBLIC__/home/images/home.png" />
-				<p>首页</p>
-			</a>
-			<a href="{:U('Classifi/index')}"><img src="__PUBLIC__/home/images/edit.png" />
-				<p>分类</p>
-			</a>
-			<a href="menu.html"><img src="__PUBLIC__/home/images/order.png" />
-				<p>菜谱</p>
-			</a>
-			<a href="myOrder.html"><img src="__PUBLIC__/home/images/addcart.png" />
-				<p>订单</p>
-			</a>
-			<a href="mine.html"><img src="__PUBLIC__/home/images/personalcenter.png" />
-				<p>我的</p>
-			</a>
-		</div>
+		<include file="common/footer"/>
 		<script type="text/javascript" src="__PUBLIC__/home/js/jquery-2.1.0.js"></script>
-		<script type="text/javascript" src="__PUBLIC__/home/js/classify/classify.js" ></script>
+		<script type="text/javascript" src="__PUBLIC__/home/js/classify/classify.js"></script>
 		<script>
 			mui.init({
 				swipeBack: false
@@ -81,6 +70,14 @@
 					indicators: true //是否显示滚动条
 				});
 			})(mui);
+			$(function() {
+				$("#sidebar>ul>li:nth-of-type(2)").click(function() {
+					$(".j-content").html("<iframe src='2.html' frameborder='0' width='100%' height='100%' class='ifam'></iframe>")
+				})
+				$("#sidebar>ul>li:nth-of-type(1)").click(function() {
+					$(".j-content").html("<iframe src='1.html' frameborder='0' width='100%' height='100%' class='ifam'></iframe>")
+				})
+			})
 		</script>
 	</body>
 

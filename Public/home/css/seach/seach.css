@@ -8,23 +8,32 @@ body{
 	background-color: #fff;
 }
 /*头部*/
+.mui-bar .mui-icon{
+	font-size: 32px;
+	padding-top: 5px;
+}
+.wod{
+	margin-top: 5px;
+}
 .sea{
+	width: 30px;
 	margin-top: -5px;
 	margin-left: -5px;
 }
 .mui-bar .mui-title{
-	margin: 4px 15px;
+	margin: 8px 15px;
 	box-sizing: border-box;
-	line-height: 36px;
+	line-height: 28px;
 	background-color: #fff;
 	border-radius: 25px;
-	font-size: 16px;
+	font-size: 14px;
+	margin-top: 7px;
 }
 input[type=text]{
 	width: 69%;
 	padding: 0px 5px;
 	margin-bottom: 0;
-	height: 33px;
+	height: 28px;
 	border: none;
 	border-radius: 0px;
 	font-size: 15px;
@@ -41,7 +50,10 @@ input[type=text]{
 	width: 50px;
 	height: 50px;
 	text-align: center;
-	padding: 5px;
+	padding: 6px 5px;
+}
+.sea-yuan img{
+	width: 26px;
 }
 .seach-top span{
 	float: left;
@@ -67,7 +79,21 @@ input[type=text]{
 	text-align: center;
 	margin:30px auto;
 }
+header {
+	background: #B00808 !important;
+}
 
+.mui-pull-left {
+	color: white !important;
+}
+
+h1 {
+	font-size: 20px !important;
+	color: white !important;
+}
+body,html,.mui-content{
+	background: white !important;
+}
 
 
 

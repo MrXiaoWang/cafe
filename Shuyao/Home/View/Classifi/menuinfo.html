@@ -16,9 +16,12 @@
 	<section class="menu-right padding-all j-content">
 		<div class="mui-row">
 		<foreach name="data" item="m">
+
 			<div class="mui-col-xs-4 mui-col-lg-4">
 				<a href="{:U('Classifi/detail')}?id={$m.id}" target="_blank">
-					<img src="__UPLOAD__/{$m.minfo_img}" />
+					<div class="img_pic">
+						<img src="__UPLOAD__/{$m.minfo_img}" />
+					</div>
 					<p class="cl-tit">{$m.minfo_name}</p>
 				</a>
 			</div>

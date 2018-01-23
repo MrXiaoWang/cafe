@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>菜谱</title>
+		<script src="__PUBLIC__/qiantai/js/mui.min.js"></script>
+		<link href="__PUBLIC__/qiantai/css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="__PUBLIC__/qiantai/css/Share.css" />
+		<link rel="stylesheet" href="__PUBLIC__/qiantai/css/menu/menu.css" />
+		<link rel="stylesheet" href="__PUBLIC__/qiantai/css/footer/footer.css" />
+		<script type="text/javascript" charset="UTF-8">
+			mui.init();
+		</script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">菜谱</h1>
+		</header>
+
+		<div id="slider" class="mui-slider">
+			<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+				<a class="mui-control-item mui-active" href="#item1mobile">
+					菜品
+				</a>
+				<a class="mui-control-item" href="#item2mobile">
+					酒水
+				</a>
+			</div>
+			<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+			<div class="mui-slider-group">
+				<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+					<div id="scroll1" class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<div class="box">
+								<ul>
+									
+									       <!-- 遍历数据库数据 --> 
+        								<foreach name="list" item="b">
+        								<li>
+										<div class="box-a">
+											<a href="{:U("detail")}?id={$b.id}">
+												<img src="__UPLOAD__/{$b.minfo_img}">
+											</a>
+											
+											<div class="pox-b">
+												<p class="p1">{$b.minfo_name}</a>
+													<div class="n-btn">
+														<p class="p2">￥<span>{$b.minfo_price}</span><s class="mst">￥{$b.minfo_original}</s></p>
+														<input type="button" value="加入订单" />
+													</div>
+											
+											</div>
+										</div>
+										</li>
+										</foreach>
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="item2mobile" class="mui-slider-item mui-control-content">
+					<div id="scroll2" class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<div class="box">
+								<ul>
+								<foreach name="lists" item="c">
+									<li>
+										<div class="box-a">
+											<a href="{:U("detail")}?id={$c.id}">
+												<img src="__UPLOAD__/{$c.minfo_img}">
+											</a>
+											<div class="pox-b">
+												<p class="p1">{$c.minfo_name}</a>
+													<div class="n-btn">
+														<p class="p2">￥<span>{$c.minfo_price}</span><s class="mst">￥{$c.minfo_original}</s></p>
+														<input type="button" value="加入订单" />
+													</div>
+											</div>
+
+										</div>
+									</li>
+								</foreach>
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		<!--<iframe src="footer.html" width="100%" frameborder="0" height="49px" style="position: fixed; bottom: 0px;"></iframe>-->
+		<!--底部-->
+		<include file="common/footer"/>
+	</body>
+
+	<script type="text/javascript" src="__PUBLIC__/qiantai/js/Share.js"></script>
+
+</html>
