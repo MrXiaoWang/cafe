@@ -37,27 +37,29 @@
 						<div class="mui-scroll">
 							<div class="box">
 								<ul>
-									
 									       <!-- 遍历数据库数据 --> 
         								<foreach name="list" item="b">
         								<li>
 										<div class="box-a">
-											<a href="{:U("detail")}?id={$b.id}">
+											<a href="{:U('Classifi/detail')}?id={$b.id}">
 												<img src="__UPLOAD__/{$b.minfo_img}">
 											</a>
-											
 											<div class="pox-b">
 												<p class="p1">{$b.minfo_name}</a>
 													<div class="n-btn">
 														<p class="p2">￥<span>{$b.minfo_price}</span><s class="mst">￥{$b.minfo_original}</s></p>
-														<input type="button" value="加入订单" />
+														<!-- <input type="button" value="加入订单" /> -->
+
+										<form action='{:U("Order/addOrder")}' method="post">
+										<input type="hidden" value="{$b.id}" name="menu_id"/>
+										<input type="submit" id="add-dd" value="加入订单"/>
+										</form>
+
 													</div>
-											
 											</div>
 										</div>
 										</li>
 										</foreach>
-									
 								</ul>
 							</div>
 						</div>
@@ -78,7 +80,12 @@
 												<p class="p1">{$c.minfo_name}</a>
 													<div class="n-btn">
 														<p class="p2">￥<span>{$c.minfo_price}</span><s class="mst">￥{$c.minfo_original}</s></p>
-														<input type="button" value="加入订单" />
+														<!-- <input type="button" value="加入订单" />
+														 -->
+														 <form action='{:U("Order/addOrder")}' method="post">
+										<input type="hidden" value="{$c.id}" name="menu_id"/>
+										<input type="submit" id="add-dd" value="加入订单"/>
+										</form>
 													</div>
 											</div>
 

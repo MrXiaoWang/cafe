@@ -35,15 +35,10 @@ class StatementController extends CheckController {
             }
         }
         //查询月份
-        $time= $orderecord ->order('y_time desc')->getField("y_time",true);
-       
+        $time= $orderecord ->order('y_time asc')->getField("y_time",true);
         // 查询盈利额
         $y_earnings = $orderecord ->getField("y_earnings",true);
-
-
-
         $this->assign("time",json_encode($time));
-
         $this->assign("list",json_encode($y_earnings));
         //分页显示输出
         $this->display(); 

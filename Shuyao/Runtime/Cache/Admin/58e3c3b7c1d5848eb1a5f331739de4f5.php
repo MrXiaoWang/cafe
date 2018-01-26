@@ -94,7 +94,7 @@
     系统管理
   </h2>
   <ul>
-  <li><a href="<?php echo U('Statement/Statement');?>" target="right"><span class="icon-caret-right"></span>单月报表</a></li>
+  <li><a href="<?php echo U('Statement/Statement');?>" target="right"><span class="icon-caret-right"></span>数据报表</a></li>
     <li><a href="<?php echo U('Admin/index');?>" target="right"><span class="icon-caret-right"></span>管理员信息</a></li>
     <li><a href="<?php echo U('Action/index');?>" target="right"><span class="icon-caret-right"></span>管理员操作记录</a></li>
   </ul> 

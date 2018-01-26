@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Highcharts Example</title>
+        <title>数据报表</title>
 
         <style type="text/css">
 #container {
@@ -31,8 +31,12 @@
     }
 
      $s = eval(<?php echo $time;?>);
+
+
+
      for (i=0;i<$s.length;i++){
-        $date = new Date(parseInt($s[i]));
+        $date = new Date(parseInt($s[i])*1000);
+        
         $s[i] = ($date.getMonth()+1)+"月";
     }
 

@@ -25,7 +25,7 @@
 	<body>
 		<!--头部-->
 		<header class="mui-bar mui-bar-nav">
-			<a href="seach.html">
+			<a href="<?php echo U('Shach/seach');?>">
 				<div class="Cable">
 					<img src="/cafe/Public/home/img/home/Cable.png" />
 				</div>
@@ -66,7 +66,7 @@
 			<a href="<?php echo U('Menu/menu');?>"><img src="/cafe/Public/home/images/order.png" />
 				<p>菜谱</p>
 			</a>
-			<a href="myOrder.html"><img src="/cafe/Public/home/images/addcart.png" />
+			<a href="<?php echo U('Order/index');?>"><img src="/cafe/Public/home/images/addcart.png" />
 				<p>订单</p>
 			</a>
 			<a href="<?php echo U('Our/index');?>"><img src="/cafe/Public/home/images/personalcenter.png" />

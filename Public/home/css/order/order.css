@@ -201,6 +201,7 @@ h1 {
 }
 body,html,.mui-content{
 	background: white !important;
+	margin-bottom: 40px !important;
 }
 .mui-pull-right{
 	color: white !important;

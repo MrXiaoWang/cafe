@@ -37,25 +37,27 @@
 						<div class="mui-scroll">
 							<div class="box">
 								<ul>
-									
 									       <!-- 遍历数据库数据 --> 
         								<?php if(is_array($list)): foreach($list as $key=>$b): ?><li>
 										<div class="box-a">
-											<a href="<?php echo U("detail");?>?id=<?php echo ($b["id"]); ?>">
+											<a href="<?php echo U('Classifi/detail');?>?id=<?php echo ($b["id"]); ?>">
 												<img src="/cafe/Uploads/<?php echo ($b["minfo_img"]); ?>">
 											</a>
-											
 											<div class="pox-b">
 												<p class="p1"><?php echo ($b["minfo_name"]); ?></a>
 													<div class="n-btn">
 														<p class="p2">￥<span><?php echo ($b["minfo_price"]); ?></span><s class="mst">￥<?php echo ($b["minfo_original"]); ?></s></p>
-														<input type="button" value="加入订单" />
+														<!-- <input type="button" value="加入订单" /> -->
+
+										<form action='<?php echo U("Order/addOrder");?>' method="post">
+										<input type="hidden" value="<?php echo ($b["id"]); ?>" name="menu_id"/>
+										<input type="submit" id="add-dd" value="加入订单"/>
+										</form>
+
 													</div>
-											
 											</div>
 										</div>
 										</li><?php endforeach; endif; ?>
-									
 								</ul>
 							</div>
 						</div>
@@ -75,7 +77,12 @@
 												<p class="p1"><?php echo ($c["minfo_name"]); ?></a>
 													<div class="n-btn">
 														<p class="p2">￥<span><?php echo ($c["minfo_price"]); ?></span><s class="mst">￥<?php echo ($c["minfo_original"]); ?></s></p>
-														<input type="button" value="加入订单" />
+														<!-- <input type="button" value="加入订单" />
+														 -->
+														 <form action='<?php echo U("Order/addOrder");?>' method="post">
+										<input type="hidden" value="<?php echo ($c["id"]); ?>" name="menu_id"/>
+										<input type="submit" id="add-dd" value="加入订单"/>
+										</form>
 													</div>
 											</div>
 
@@ -103,7 +110,7 @@
 			<a href="<?php echo U('Menu/menu');?>"><img src="/cafe/Public/home/images/order.png" />
 				<p>菜谱</p>
 			</a>
-			<a href="myOrder.html"><img src="/cafe/Public/home/images/addcart.png" />
+			<a href="<?php echo U('Order/index');?>"><img src="/cafe/Public/home/images/addcart.png" />
 				<p>订单</p>
 			</a>
 			<a href="<?php echo U('Our/index');?>"><img src="/cafe/Public/home/images/personalcenter.png" />

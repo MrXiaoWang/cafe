@@ -84,7 +84,7 @@
 			<a href="<?php echo U('Menu/menu');?>"><img src="/cafe/Public/home/images/order.png" />
 				<p>菜谱</p>
 			</a>
-			<a href="myOrder.html"><img src="/cafe/Public/home/images/addcart.png" />
+			<a href="<?php echo U('Order/index');?>"><img src="/cafe/Public/home/images/addcart.png" />
 				<p>订单</p>
 			</a>
 			<a href="<?php echo U('Our/index');?>"><img src="/cafe/Public/home/images/personalcenter.png" />

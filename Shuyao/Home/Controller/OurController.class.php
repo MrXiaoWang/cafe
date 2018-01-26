@@ -6,7 +6,7 @@ class OurController extends Controller {
     public function index(){
 
         //根据用户存的session查询出用户的数据
-        $_SESSION["u_phone"] = '13896324414';
+        //$_SESSION["u_phone"] = '13896324414';
 
         $u_phone = I('session.u_phone');
 

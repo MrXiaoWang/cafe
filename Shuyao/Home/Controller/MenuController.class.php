@@ -8,7 +8,10 @@ class MenuController extends Controller {
         $t = M('menuinfo');
         // 调用查询方法
         /*查询菜品*/
-        $caiping = $t->where('mtype_id in(1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016)')->select();
+         $caiping = $t->where('mtype_id !=1017')->select();
+        // $caiping = $t->select();
+        // dump($caiping);
+        // die();
         /*查询酒水*/
         $jiushui = $t->where('mtype_id=1017')->select();
         // dump($data);
