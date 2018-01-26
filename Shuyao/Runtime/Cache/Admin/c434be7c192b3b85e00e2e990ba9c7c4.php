@@ -20,6 +20,15 @@
   <ul class="search" style="padding-left:10px;">
   <li>
     <button type="button" class="button border-yellow" onclick="window.location.href='#add'"><span class="icon-plus-square-o"></span> 添加商品类型</button></li>
+       <!--  <form action="" method="post">
+        &nbsp;&nbsp;
+          菜品查询：
+          <select name="s_isvouch" class="input" onchange="changesearch()"  style="width:150px; line-height:17px;display:inline-block">
+            <option value="">请选择菜品类型</option>
+            <?php if(is_array($data1)): foreach($data1 as $key=>$ty): ?><option value="<?php echo ($ty["mtype_name"]); ?>"><?php echo ($ty["mtype_name"]); ?></option><?php endforeach; endif; ?>
+          </select>
+        &nbsp;&nbsp;  
+        </form> -->
     <form action="<?php echo U('Menu/menutypemohu');?>" method='post'>
         <li style="margin-left: 600px; width: 400px; float: left; margin-top: -40px;">
         <input type="text" placeholder="请输入搜索类型名称" name="keywords" class="input" style="width:250px; line-height:17px;display:inline-block" />

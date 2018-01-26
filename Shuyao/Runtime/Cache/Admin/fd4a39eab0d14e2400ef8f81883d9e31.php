@@ -15,6 +15,29 @@
 <style type="text/css">
 .tu{width: 260px; height: 160px;} 
 </style>
+
+<script type="text/javascript">
+    function show(){
+      //获取被选中的下拉框
+      var sea=$('select option:selected').val();
+
+      $url = '<?php echo U("Menu/sea");?>';
+
+      $.post($url,{typeid:sea},function(dd){
+
+        $menu = eval(dd);
+        $str = "<table class='table table-hover text-center' id='tab'><tr><th width='100'style='text-align:left; padding-left:20px;'>ID</th><th>菜品图</th> <th>菜品名称</th> <th>菜品所属系列</th> <th>菜品价格</th> <th width='310'>操作</th> </tr>";
+        for (var i = 0; i <$menu.length; i++) {
+          $str+="<tr><td style='text-align:left; padding-left:20px;'>"+$menu[i]['id']+"</td><td width='10%'><img src='/cafe/Uploads/"+$menu[i]['minfo_img']+"'' width='70' height='50' /></td><td>"+$menu[i]['minfo_name']+"</td><td><font color='#00CC99'>"+$menu[i]['mtype_name']+"</font></td><td>"+$menu[i]['minfo_price']+"￥</td><td><div class='button-group'> <a class='button border-main'href='<?php echo U('Menu/updminfo');?>?id="+$menu[i]['id']+"'><span class='icon-edit'></span> 修改</a> <a class='button border-red' href='<?php echo U('Menu/delminfo');?>?id="+$menu[i]['id']+"'  onclick='return confirm('您确认要将此菜品删除吗?');'><span class='icon-trash-o'></span> 删除</a> </div></td></tr>";
+
+        }
+          $('#tab').html($str);
+
+      })
+
+    }
+</script>
+
 </head>
 <body>
 
@@ -26,14 +49,29 @@
         <a class="button border-main icon-plus-square-o" onclick="window.location.href='#add'" > 添加内容
         </a> 
         </li>
-        <form action="<?php echo U('Menu/menuinfomohu');?>" method='post'>
-        <li style="margin-left: 600px;">
-          <input type="text" placeholder="请输入搜索菜品名称" name="keywords" class="input" style="width:250px; line-height:17px;display:inline-block" />
-        <input type="submit" class="button border-main icon-search" value="输入并搜索"></li>
-        </form>
+        <li style="margin-left: 300px;">
+          <form action="" method="">
+          &nbsp;&nbsp;
+            菜品查询：
+            <select id="mtype_name" name="mtype_name" class="input" onchange="show()"  
+              style="width:150px;
+             line-height:17px;display:inline-block">
+              <option value="">请选择菜品类型</option>
+              <?php if(is_array($data1)): foreach($data1 as $key=>$ty): ?><option value="<?php echo ($ty["mtype_id"]); ?>"><?php echo ($ty["mtype_name"]); ?></option><?php endforeach; endif; ?>
+            </select>
+          &nbsp;&nbsp;  
+          </form>
+        </li>
+        <li style="margin-left: 20px;">
+            <form action="<?php echo U('Menu/menuinfomohu');?>" method='post'>
+           
+              <input type="text" placeholder="请输入搜索菜品名称" name="keywords" class="input" style="width:250px; line-height:17px;display:inline-block" />
+            <input type="submit" class="button border-main icon-search" value="输入并搜索">
+            </form>
+        </li>
       </ul>
     </div>
-    <table class="table table-hover text-center">
+    <table class="table table-hover text-center" id='tab'>
       <tr>
         <th width="100" style="text-align:left; padding-left:20px;">ID</th>
         <th>菜品图</th>
@@ -44,7 +82,8 @@
       </tr>
       <?php if(is_array($data)): foreach($data as $key=>$minfo): ?><tr>
           <td style="text-align:left; padding-left:20px;"><?php echo ($minfo["id"]); ?></td>
-          <td width="10%"><img src="/cafe/Uploads/<?php echo ($minfo["minfo_img"]); ?>" alt="" width="70" height="50" /></td>
+          <td width="10%"><img src="/cafe/Uploads/<?php echo ($minfo["minfo_img"]); ?>" alt="" width="70" height="50" />
+          </td>
           <td><?php echo ($minfo["minfo_name"]); ?></td>
           <td><font color="#00CC99"><?php echo ($minfo["mtype_name"]); ?></font></td>
           <td><?php echo ($minfo["minfo_price"]); ?>￥</td>

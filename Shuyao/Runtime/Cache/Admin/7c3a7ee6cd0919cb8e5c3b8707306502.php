@@ -24,7 +24,7 @@
         <th width="10%">邮箱</th>
         <th width="15%">联系地址</th>
         <th width="15%">头像</th>
-        <th width="10%">操作</th>
+        <!-- <th width="10%">操作</th> -->
       </tr>
       <?php if(is_array($list)): foreach($list as $key=>$list): ?><tr>
         <td><?php echo ($list["id"]); ?></td>
@@ -37,11 +37,11 @@
         <td><?php echo ($list["u_email"]); ?></td>
         <td><?php echo ($list["u_address"]); ?></td>
         <td><img src="/cafe/Public/images/<?php echo ($list["u_img"]); ?>" class="radius-circle" height="50" alt="" /></td>
-        <td>
+        <!-- <td>
         <div class="button-group">
         <a class="button border-main" href="cateedit.html"><span class="icon-edit"></span> 修改</a>
         </div>
-        </td>
+        </td> -->
       </tr><?php endforeach; endif; ?>
       <tr>
         <td colspan="8">

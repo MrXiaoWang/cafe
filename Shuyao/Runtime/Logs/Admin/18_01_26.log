@@ -1,0 +1,852 @@
+[ 2018-01-26T09:35:50+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000856s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000873s ]
+NOTIC: [8] Undefined index: id F:\phpStudy\WWW\cafe\Shuyao\Admin\Controller\CheckController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.074199s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.074265s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001512s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001570s ]
+
+[ 2018-01-26T09:35:54+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000799s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001149s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001236s ]
+SQL: SHOW COLUMNS FROM `sy_admin` [ RunTime:0.0443s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019301s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019468s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000813s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000913s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005186s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005295s ]
+
+[ 2018-01-26T09:35:55+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Login/yzm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000814s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000889s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001369s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001520s ]
+
+[ 2018-01-26T09:36:06+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000799s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001844s ]
+SQL: SHOW COLUMNS FROM `sy_admin` [ RunTime:0.0687s ]
+NOTIC: [8] Undefined index: verify F:\phpStudy\WWW\cafe\Shuyao\Admin\Controller\LoginController.class.php 第 9 行.
+SQL: SELECT * FROM `sy_admin` WHERE `adm_name` = 'ccyi' AND `adm_pwd` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.0516s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012627s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012731s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001221s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001360s ]
+SQL: UPDATE `sy_admin` SET `adm_lasttime`='18-01-26 09:36:06',`adm_server`='127.0.0.1' WHERE id='1' [ RunTime:0.0568s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001455s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001562s ]
+
+[ 2018-01-26T09:36:08+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000773s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000847s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054327s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054393s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000572s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000614s ]
+
+[ 2018-01-26T09:36:08+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Index/info.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000730s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000797s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028867s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028946s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001217s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001286s ]
+
+[ 2018-01-26T09:36:23+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/type.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000802s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000967s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001054s ]
+SQL: SHOW COLUMNS FROM `sy_menutype` [ RunTime:0.0786s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sy_menutype` LIMIT 1   [ RunTime:0.0552s ]
+SQL: SELECT * FROM `sy_menutype` ORDER BY mtype_id LIMIT 0,5   [ RunTime:0.0518s ]
+SQL: SELECT * FROM `sy_menutype`  [ RunTime:0.0564s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.083927s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.083997s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000542s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001190s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001257s ]
+
+[ 2018-01-26T09:36:25+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000854s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0508s ]
+SQL: SHOW COLUMNS FROM `sy_menutype` [ RunTime:0.0556s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sy_menuinfo` LIMIT 1   [ RunTime:0.0596s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0661s ]
+SQL: SELECT i.id,i.minfo_img,i.minfo_name,t.mtype_name,i.minfo_price FROM sy_menuinfo i,sy_menutype t WHERE ( i.mtype_id=t.mtype_id ) ORDER BY i.id LIMIT 0,5   [ RunTime:0.0623s ]
+SQL: SELECT `mtype_id`,`mtype_name` FROM `sy_menutype`  [ RunTime:0.0619s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.100470s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.100539s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000691s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001209s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001275s ]
+
+[ 2018-01-26T09:36:39+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/menuinfomohu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000615s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0618s ]
+SQL: SELECT * FROM `sy_menuinfo` WHERE ( minfo_name like '%酱香%' )  [ RunTime:0.0656s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000255s ]
+NOTIC: [8] Undefined variable: data1 F:\phpStudy\WWW\cafe\Shuyao\Runtime\Cache\Admin\fd4a39eab0d14e2400ef8f81883d9e31.php 第 60 行.
+NOTIC: [8] Undefined index: mtype_name F:\phpStudy\WWW\cafe\Shuyao\Runtime\Cache\Admin\fd4a39eab0d14e2400ef8f81883d9e31.php 第 88 行.
+NOTIC: [8] Undefined variable: page F:\phpStudy\WWW\cafe\Shuyao\Runtime\Cache\Admin\fd4a39eab0d14e2400ef8f81883d9e31.php 第 96 行.
+NOTIC: [8] Undefined variable: data1 F:\phpStudy\WWW\cafe\Shuyao\Runtime\Cache\Admin\fd4a39eab0d14e2400ef8f81883d9e31.php 第 135 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016254s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016335s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000652s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002281s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002529s ]
+
+[ 2018-01-26T09:36:42+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000700s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000772s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0636s ]
+SQL: SHOW COLUMNS FROM `sy_menutype` [ RunTime:0.0615s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sy_menuinfo` LIMIT 1   [ RunTime:0.0566s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0660s ]
+SQL: SELECT i.id,i.minfo_img,i.minfo_name,t.mtype_name,i.minfo_price FROM sy_menuinfo i,sy_menutype t WHERE ( i.mtype_id=t.mtype_id ) ORDER BY i.id LIMIT 0,5   [ RunTime:0.0765s ]
+SQL: SELECT `mtype_id`,`mtype_name` FROM `sy_menutype`  [ RunTime:0.0595s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000265s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019369s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019517s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000815s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000919s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001912s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002019s ]
+
+[ 2018-01-26T09:36:45+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/sea.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000925s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000959s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0997s ]
+SQL: SELECT * FROM `sy_menuinfo` WHERE ( mtype_id=1003 )  [ RunTime:0.0837s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001378s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001533s ]
+
+[ 2018-01-26T09:36:50+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/sea.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000863s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000939s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0645s ]
+SQL: SELECT * FROM `sy_menuinfo` WHERE ( mtype_id=1001 )  [ RunTime:0.0697s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001381s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001476s ]
+
+[ 2018-01-26T09:37:28+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/sea.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000694s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000867s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0620s ]
+SQL: SELECT * FROM `sy_menuinfo` WHERE ( mtype_id=1013 )  [ RunTime:0.0637s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001405s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001530s ]
+
+[ 2018-01-26T09:37:40+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/sea.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000765s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000861s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000934s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0373s ]
+SQL: SELECT * FROM `sy_menuinfo` WHERE ( mtype_id=0 )  [ RunTime:0.0677s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001775s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001873s ]
+
+[ 2018-01-26T09:37:42+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000734s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000857s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0648s ]
+SQL: SHOW COLUMNS FROM `sy_menutype` [ RunTime:0.0644s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sy_menuinfo` LIMIT 1   [ RunTime:0.0661s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0683s ]
+SQL: SELECT i.id,i.minfo_img,i.minfo_name,t.mtype_name,i.minfo_price FROM sy_menuinfo i,sy_menutype t WHERE ( i.mtype_id=t.mtype_id ) ORDER BY i.id LIMIT 0,5   [ RunTime:0.0715s ]
+SQL: SELECT `mtype_id`,`mtype_name` FROM `sy_menutype`  [ RunTime:0.0460s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014238s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014310s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000711s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000771s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001022s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001092s ]
+
+[ 2018-01-26T09:38:05+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000760s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0631s ]
+SQL: SHOW COLUMNS FROM `sy_menutype` [ RunTime:0.0645s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sy_menuinfo` LIMIT 1   [ RunTime:0.0705s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0647s ]
+SQL: SELECT i.id,i.minfo_img,i.minfo_name,t.mtype_name,i.minfo_price FROM sy_menuinfo i,sy_menutype t WHERE ( i.mtype_id=t.mtype_id ) ORDER BY i.id LIMIT 0,5   [ RunTime:0.0663s ]
+SQL: SELECT `mtype_id`,`mtype_name` FROM `sy_menutype`  [ RunTime:0.0650s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021758s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021865s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000844s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000946s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001490s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001822s ]
+
+[ 2018-01-26T09:38:10+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/menu/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000731s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0609s ]
+SQL: SHOW COLUMNS FROM `sy_menutype` [ RunTime:0.0529s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sy_menuinfo` LIMIT 1   [ RunTime:0.0566s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0574s ]
+SQL: SELECT i.id,i.minfo_img,i.minfo_name,t.mtype_name,i.minfo_price FROM sy_menuinfo i,sy_menutype t WHERE ( i.mtype_id=t.mtype_id ) ORDER BY i.id LIMIT 5,5   [ RunTime:0.0475s ]
+SQL: SELECT `mtype_id`,`mtype_name` FROM `sy_menutype`  [ RunTime:0.0512s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000190s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000304s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016528s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000699s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001702s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001806s ]
+
+[ 2018-01-26T09:38:16+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/sea.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000872s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001014s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0515s ]
+SQL: SELECT * FROM `sy_menuinfo` WHERE ( mtype_id=1004 )  [ RunTime:0.0550s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001237s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001316s ]
+
+[ 2018-01-26T09:38:29+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/delminfo.html?id=16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000983s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001059s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0621s ]
+SQL: DELETE FROM `sy_menuinfo` WHERE `id` = 16 [ RunTime:0.0640s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010978s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000673s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000758s ]
+SQL: SHOW COLUMNS FROM `sy_action` [ RunTime:0.1070s ]
+NOTIC: [2] Creating default object from empty value F:\phpStudy\WWW\cafe\Shuyao\Admin\Controller\MenuController.class.php 第 171 行.
+SQL: INSERT INTO `sy_action` (`adm_name`,`a_info`,`adm_server`) VALUES ('ccyi','删除了菜品！','127.0.0.1') [ RunTime:0.0793s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001257s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001349s ]
+
+[ 2018-01-26T09:38:30+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000788s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001691s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0515s ]
+SQL: SHOW COLUMNS FROM `sy_menutype` [ RunTime:0.0521s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sy_menuinfo` LIMIT 1   [ RunTime:0.0539s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0541s ]
+SQL: SELECT i.id,i.minfo_img,i.minfo_name,t.mtype_name,i.minfo_price FROM sy_menuinfo i,sy_menutype t WHERE ( i.mtype_id=t.mtype_id ) ORDER BY i.id LIMIT 0,5   [ RunTime:0.0584s ]
+SQL: SELECT `mtype_id`,`mtype_name` FROM `sy_menutype`  [ RunTime:0.0534s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010323s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010389s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001181s ]
+
+[ 2018-01-26T09:39:49+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/addminfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000225s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001507s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002222s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002364s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0688s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given F:\phpStudy\WWW\cafe\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: INSERT INTO `sy_menuinfo` (`minfo_name`,`mtype_id`,`minfo_price`,`minfo_original`,`minfo_count`,`minfo_istuijian`,`minfo_isnew`,`minfo_remark`,`minfo_img`) VALUES ('美味炒河粉','1004','12','13','2','0','0','原料：米粉、胡萝卜、生菜、鸡蛋、酱油、盐、糖、蚝油。','./minfo_img/2018-01-26/5a6a86e48bc20.jpg') [ RunTime:0.0998s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021326s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021430s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002201s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002276s ]
+SQL: SHOW COLUMNS FROM `sy_action` [ RunTime:0.0773s ]
+NOTIC: [2] Creating default object from empty value F:\phpStudy\WWW\cafe\Shuyao\Admin\Controller\MenuController.class.php 第 148 行.
+SQL: INSERT INTO `sy_action` (`adm_name`,`a_info`,`adm_server`) VALUES ('ccyi','添加了新菜品！','127.0.0.1') [ RunTime:0.0939s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003537s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003646s ]
+
+[ 2018-01-26T09:39:50+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000811s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001154s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0486s ]
+SQL: SHOW COLUMNS FROM `sy_menutype` [ RunTime:0.0615s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sy_menuinfo` LIMIT 1   [ RunTime:0.0860s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0625s ]
+SQL: SELECT i.id,i.minfo_img,i.minfo_name,t.mtype_name,i.minfo_price FROM sy_menuinfo i,sy_menutype t WHERE ( i.mtype_id=t.mtype_id ) ORDER BY i.id LIMIT 0,5   [ RunTime:0.1017s ]
+SQL: SELECT `mtype_id`,`mtype_name` FROM `sy_menutype`  [ RunTime:0.0843s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013258s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013327s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000984s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001047s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001966s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002057s ]
+
+[ 2018-01-26T09:39:57+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/sea.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001447s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001387s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0511s ]
+SQL: SELECT * FROM `sy_menuinfo` WHERE ( mtype_id=1004 )  [ RunTime:0.0547s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001938s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002027s ]
+
+[ 2018-01-26T09:39:59+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/updminfo.html?id=38
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000611s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001360s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0692s ]
+SQL: SHOW COLUMNS FROM `sy_menutype` [ RunTime:0.0785s ]
+SQL: SELECT * FROM `sy_menutype`  [ RunTime:0.0616s ]
+SQL: SELECT * FROM `sy_menuinfo` WHERE `id` = 38  [ RunTime:0.0669s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+NOTIC: [8] Undefined index: mtype_name F:\phpStudy\WWW\cafe\Shuyao\Runtime\Cache\Admin\ddcf5fb43a97a78f127fc3d503262247.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027753s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027836s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001311s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001390s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001862s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001952s ]
+
+[ 2018-01-26T09:40:09+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/updminfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000919s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001351s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.1250s ]
+SQL: UPDATE `sy_menuinfo` SET `minfo_name`='美味炒河粉',`mtype_id`='1003',`minfo_price`='12',`minfo_original`='13',`minfo_count`='2',`minfo_istuijian`='0',`minfo_isnew`='0',`minfo_remark`='原料：米粉、胡萝卜、生菜、鸡蛋、酱油、盐、糖、蚝油。' WHERE `id` = 38 [ RunTime:0.0690s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011524s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011601s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001181s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001254s ]
+SQL: SHOW COLUMNS FROM `sy_action` [ RunTime:0.0500s ]
+NOTIC: [2] Creating default object from empty value F:\phpStudy\WWW\cafe\Shuyao\Admin\Controller\MenuController.class.php 第 217 行.
+SQL: INSERT INTO `sy_action` (`adm_name`,`a_info`,`adm_server`) VALUES ('ccyi','修改了菜品！','127.0.0.1') [ RunTime:0.0390s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001541s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001611s ]
+
+[ 2018-01-26T09:40:11+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000756s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001238s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001318s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0476s ]
+SQL: SHOW COLUMNS FROM `sy_menutype` [ RunTime:0.0817s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sy_menuinfo` LIMIT 1   [ RunTime:0.0676s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0680s ]
+SQL: SELECT i.id,i.minfo_img,i.minfo_name,t.mtype_name,i.minfo_price FROM sy_menuinfo i,sy_menutype t WHERE ( i.mtype_id=t.mtype_id ) ORDER BY i.id LIMIT 0,5   [ RunTime:0.0621s ]
+SQL: SELECT `mtype_id`,`mtype_name` FROM `sy_menutype`  [ RunTime:0.0710s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014718s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014791s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000968s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001031s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001759s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001831s ]
+
+[ 2018-01-26T09:42:58+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000876s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000826s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000892s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0740s ]
+SQL: SHOW COLUMNS FROM `sy_menutype` [ RunTime:0.0670s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sy_menuinfo` LIMIT 1   [ RunTime:0.0820s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0673s ]
+SQL: SELECT i.id,i.minfo_img,i.minfo_name,t.mtype_name,i.minfo_price FROM sy_menuinfo i,sy_menutype t WHERE ( i.mtype_id=t.mtype_id ) ORDER BY i.id LIMIT 0,5   [ RunTime:0.0637s ]
+SQL: SELECT `mtype_id`,`mtype_name` FROM `sy_menutype`  [ RunTime:0.0701s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000151s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000259s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024121s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024223s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001294s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001388s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002874s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002987s ]
+
+[ 2018-01-26T09:43:00+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/sea.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000864s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001126s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001208s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0407s ]
+SQL: SELECT * FROM `sy_menuinfo` WHERE ( mtype_id=1001 )  [ RunTime:0.0643s ]
+
+[ 2018-01-26T09:43:10+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001027s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000997s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001078s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0530s ]
+SQL: SHOW COLUMNS FROM `sy_menutype` [ RunTime:0.0538s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sy_menuinfo` LIMIT 1   [ RunTime:0.0527s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0547s ]
+SQL: SELECT i.id,i.minfo_img,i.minfo_name,t.mtype_name,i.minfo_price FROM sy_menuinfo i,sy_menutype t WHERE ( i.mtype_id=t.mtype_id ) ORDER BY i.id LIMIT 0,5   [ RunTime:0.0546s ]
+SQL: SELECT `mtype_id`,`mtype_name` FROM `sy_menutype`  [ RunTime:0.0566s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012829s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012973s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000788s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000864s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001501s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001568s ]
+
+[ 2018-01-26T09:43:12+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/sea.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000834s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001080s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0577s ]
+SQL: SELECT * FROM `sy_menuinfo` WHERE ( mtype_id=1001 )  [ RunTime:0.0677s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001078s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001145s ]
+
+[ 2018-01-26T09:44:51+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000774s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0638s ]
+SQL: SHOW COLUMNS FROM `sy_menutype` [ RunTime:0.0626s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sy_menuinfo` LIMIT 1   [ RunTime:0.0402s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0750s ]
+SQL: SELECT i.id,i.minfo_img,i.minfo_name,t.mtype_name,i.minfo_price FROM sy_menuinfo i,sy_menutype t WHERE ( i.mtype_id=t.mtype_id ) ORDER BY i.id LIMIT 0,5   [ RunTime:0.0747s ]
+SQL: SELECT `mtype_id`,`mtype_name` FROM `sy_menutype`  [ RunTime:0.0749s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000270s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022964s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023074s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001026s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001117s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001985s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002091s ]
+
+[ 2018-01-26T09:44:53+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/sea.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000725s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000813s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0600s ]
+SQL: SHOW COLUMNS FROM `sy_menutype` [ RunTime:0.0682s ]
+SQL: SELECT * FROM sy_menutype m,sy_menuinfo i WHERE ( i.mtype_id=1003 )  [ RunTime:0.1132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001177s ]
+
+[ 2018-01-26T09:45:56+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000866s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000791s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0467s ]
+SQL: SHOW COLUMNS FROM `sy_menutype` [ RunTime:0.0745s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sy_menuinfo` LIMIT 1   [ RunTime:0.0635s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0764s ]
+SQL: SELECT i.id,i.minfo_img,i.minfo_name,t.mtype_name,i.minfo_price FROM sy_menuinfo i,sy_menutype t WHERE ( i.mtype_id=t.mtype_id ) ORDER BY i.id LIMIT 0,5   [ RunTime:0.0757s ]
+SQL: SELECT `mtype_id`,`mtype_name` FROM `sy_menutype`  [ RunTime:0.0764s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000146s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000240s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016354s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016446s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000725s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000833s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001690s ]
+
+[ 2018-01-26T09:45:59+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/sea.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000783s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001184s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0738s ]
+SQL: SHOW COLUMNS FROM `sy_menutype` [ RunTime:0.0751s ]
+SQL: SELECT * FROM sy_menutype m,sy_menuinfo i WHERE ( i.mtype_id=1001 and m.mtype_id=i.mtype_id )  [ RunTime:0.1039s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000865s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001014s ]
+
+[ 2018-01-26T09:46:06+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/sea.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000797s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001536s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0942s ]
+SQL: SHOW COLUMNS FROM `sy_menutype` [ RunTime:0.0642s ]
+SQL: SELECT * FROM sy_menutype m,sy_menuinfo i WHERE ( i.mtype_id=1009 and m.mtype_id=i.mtype_id )  [ RunTime:0.1145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001227s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001326s ]
+
+[ 2018-01-26T09:46:09+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000636s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0866s ]
+SQL: SHOW COLUMNS FROM `sy_menutype` [ RunTime:0.0585s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sy_menuinfo` LIMIT 1   [ RunTime:0.0924s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.1253s ]
+SQL: SELECT i.id,i.minfo_img,i.minfo_name,t.mtype_name,i.minfo_price FROM sy_menuinfo i,sy_menutype t WHERE ( i.mtype_id=t.mtype_id ) ORDER BY i.id LIMIT 0,5   [ RunTime:0.1151s ]
+SQL: SELECT `mtype_id`,`mtype_name` FROM `sy_menutype`  [ RunTime:0.0548s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000145s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000241s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021056s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021188s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000786s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000941s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001517s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001880s ]
+
+[ 2018-01-26T09:46:20+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/menu/p/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000655s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0736s ]
+SQL: SHOW COLUMNS FROM `sy_menutype` [ RunTime:0.0441s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sy_menuinfo` LIMIT 1   [ RunTime:0.0854s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0727s ]
+SQL: SELECT i.id,i.minfo_img,i.minfo_name,t.mtype_name,i.minfo_price FROM sy_menuinfo i,sy_menutype t WHERE ( i.mtype_id=t.mtype_id ) ORDER BY i.id LIMIT 15,5   [ RunTime:0.0845s ]
+SQL: SELECT `mtype_id`,`mtype_name` FROM `sy_menutype`  [ RunTime:0.0638s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016811s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016923s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000757s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000872s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001838s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001967s ]
+
+[ 2018-01-26T09:46:24+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/sea.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000746s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000763s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000862s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0620s ]
+SQL: SHOW COLUMNS FROM `sy_menutype` [ RunTime:0.0819s ]
+SQL: SELECT * FROM sy_menutype m,sy_menuinfo i WHERE ( i.mtype_id=1001 and m.mtype_id=i.mtype_id )  [ RunTime:0.0619s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001645s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001784s ]
+
+[ 2018-01-26T09:47:10+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000736s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000825s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0566s ]
+SQL: SHOW COLUMNS FROM `sy_menutype` [ RunTime:0.1011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sy_menuinfo` LIMIT 1   [ RunTime:0.0673s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0635s ]
+SQL: SELECT i.id,i.minfo_img,i.minfo_name,t.mtype_name,i.minfo_price FROM sy_menuinfo i,sy_menutype t WHERE ( i.mtype_id=t.mtype_id ) ORDER BY i.id LIMIT 0,5   [ RunTime:0.0579s ]
+SQL: SELECT `mtype_id`,`mtype_name` FROM `sy_menutype`  [ RunTime:0.0441s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014421s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000887s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001599s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001698s ]
+
+[ 2018-01-26T09:47:12+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/sea.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000605s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000892s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0422s ]
+SQL: SHOW COLUMNS FROM `sy_menutype` [ RunTime:0.0430s ]
+SQL: SELECT * FROM sy_menutype m,sy_menuinfo i WHERE ( i.mtype_id=1002 and m.mtype_id=i.mtype_id )  [ RunTime:0.0410s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000803s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000876s ]
+
+[ 2018-01-26T09:47:16+08:00 ] 127.0.0.1 /cafe/index.php/Admin/Menu/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000558s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.1133s ]
+SQL: SHOW COLUMNS FROM `sy_menutype` [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sy_menuinfo` LIMIT 1   [ RunTime:0.0641s ]
+SQL: SHOW COLUMNS FROM `sy_menuinfo` [ RunTime:0.0708s ]
+SQL: SELECT i.id,i.minfo_img,i.minfo_name,t.mtype_name,i.minfo_price FROM sy_menuinfo i,sy_menutype t WHERE ( i.mtype_id=t.mtype_id ) ORDER BY i.id LIMIT 0,5   [ RunTime:0.0950s ]
+SQL: SELECT `mtype_id`,`mtype_name` FROM `sy_menutype`  [ RunTime:0.1046s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000216s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000336s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019053s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019178s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001021s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001168s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001630s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001892s ]
+

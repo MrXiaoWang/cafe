@@ -8,7 +8,6 @@ class TableController extends CheckController {
     	//查询所有餐桌
     	$table = M("canzhou");
 
-
     	$count      = $table->count();
     	// 查询满足要求的总记录数
     	$Page       = new \Think\Page($count,1);
@@ -37,6 +36,14 @@ class TableController extends CheckController {
 
     	if($result){
     		$this->success("添加成功",U("Table/index"));
+    		   //桌台添加成功后添加一条操作记录
+                $ac=M('action');
+                //得到操作人
+                $action->adm_name=$_SESSION['adm_name'];
+                $action->a_info="添加了桌台！";//操作内容
+                $ip = $_SERVER["REMOTE_ADDR"];
+                $action->adm_server=$_SESSION['adm_server']=$ip;//操作主机
+                $ac->data($action)->add();
     	}else{
     		$this->error("添加失败");
     	}
@@ -49,6 +56,14 @@ class TableController extends CheckController {
 
 		if($table->where('id=%d',$id)->delete()){
 			$this->success("删除成功",U("Table/index"));
+			   //桌台删除后添加一条操作记录
+                $ac=M('action');
+                //得到操作人
+                $action->adm_name=$_SESSION['adm_name'];
+                $action->a_info="删除了桌台信息！";//操作内容
+                $ip = $_SERVER["REMOTE_ADDR"];
+                $action->adm_server=$_SESSION['adm_server']=$ip;//操作主机
+                $ac->data($action)->add();
 		}else{
 			$this->error("删除失败");
 		}
@@ -66,8 +81,16 @@ class TableController extends CheckController {
 
 		if($table->where('id=%d',$id)->save()){
 			$this->success("设置成功",U("Table/index"));
+			   //修改桌台后添加一条操作记录
+                $ac=M('action');
+                //得到操作人
+                $action->adm_name=$_SESSION['adm_name'];
+                $action->a_info="修改了桌台状态！";//操作内容
+                $ip = $_SERVER["REMOTE_ADDR"];
+                $action->adm_server=$_SESSION['adm_server']=$ip;//操作主机
+                $ac->data($action)->add();
 		}else{
-			$this->error("设置失败");
+			$this->error("当前桌子是空闲的，不需要修改！");
 		}
 	}
 

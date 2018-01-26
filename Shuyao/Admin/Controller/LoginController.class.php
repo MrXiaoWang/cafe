@@ -22,13 +22,13 @@ class LoginController extends Controller {
     			$_SESSION["id"]=$result[0];//记录登录人的id
     			$_SESSION["adm_name"]=$_POST["adm_name"];//记录登录人的名字
                 $_SESSION["adm_lasttime"]=$result[0]['adm_lasttime'];
-                // var_dump($_SESSION["adm_lasttime"]);
-                // die();
     			$this->success("登录成功!",U('Index/index'));
 
                 //得到登录的ip主机地址
                 $ip = $_SERVER["REMOTE_ADDR"];
                 $_SESSION['adm_server']=$ip;
+                // dump($_SESSION['adm_server']);
+                // die();
                 //设置时区
                 date_default_timezone_set("PRC"); 
                 //获取当前时间

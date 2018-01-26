@@ -10,11 +10,14 @@ class MenuController extends CheckController {
     	$Page=new \Think\ Page($count,5);//总记录数和显示的条数
     	$show=$Page->show();
     	$data=$type->limit($Page->firstRow.','.$Page->listRows)->order("mtype_id")->select();
-    	// dump($data);
-    	// die();
     	//赋值
     	$this->assign('data',$data);
     	$this->assign('page',$show);
+        //下拉框选择菜品类型
+        $ty=M('menutype');
+        $data1=$ty->select();
+        $this->assign('data1',$data1);
+
         $this->display();
     }
 
@@ -25,10 +28,16 @@ class MenuController extends CheckController {
     		$type->create();
     		$data=$type->add();//添加到数据库
     		if($data){
-    			//echo "1";
     			$this->success('添加成功!',U('Menu/type'));
+                //商品类型添加成功后添加一条操作记录
+                $ac=M('action');
+                //得到操作人
+                $action->adm_name=$_SESSION['adm_name'];
+                $action->a_info="添加了菜品类型！";//操作内容
+                $ip = $_SERVER["REMOTE_ADDR"];
+                $action->adm_server=$_SESSION['adm_server']=$ip;//操作主机
+                $ac->data($action)->add();
     		}else{
-    			//echo '0';
     			$this->error('添加失败!',U('Menu/type'));
     		}
     	}else{
@@ -42,6 +51,14 @@ class MenuController extends CheckController {
     	$data=$type->delete($id);
     	if($data){
     		$this->success('删除成功!',U('Menu/type'));
+               //商品类型删除成功后添加一条操作记录
+                $ac=M('action');
+                //得到操作人
+                $action->adm_name=$_SESSION['adm_name'];
+                $action->a_info="删除了菜品类型！";//操作内容
+                $ip = $_SERVER["REMOTE_ADDR"];
+                $action->adm_server=$_SESSION['adm_server']=$ip;//操作主机
+                $ac->data($action)->add();
     	}else{
     		$this->error('删除失败!',U('Menu/type'));
     	}
@@ -56,6 +73,14 @@ class MenuController extends CheckController {
     		$data=$type->save();
     		if($data){
     			$this->success("修改成功!",U('Menu/type'));
+               //商品类型修改成功后添加一条操作记录
+                $ac=M('action');
+                //得到操作人
+                $action->adm_name=$_SESSION['adm_name'];
+                $action->a_info="修改了菜品类型！";//操作内容
+                $ip = $_SERVER["REMOTE_ADDR"];
+                $action->adm_server=$_SESSION['adm_server']=$ip;//操作主机
+                $ac->data($action)->add();
     		}else{
     			$this->error("修改失败！",U('Menu/type'));
     		}
@@ -86,6 +111,7 @@ class MenuController extends CheckController {
         $show=$Page->show();
         //表格
         $data=$minfo->field('i.id,i.minfo_img,i.minfo_name,t.mtype_name,i.minfo_price')->table('sy_menuinfo i,sy_menutype t')->where('i.mtype_id=t.mtype_id')->limit($Page->firstRow.','.$Page->listRows)->order("i.id")->select();
+        //得到菜品类型和类型id
         $data1=$mtype->field('mtype_id,mtype_name')->select();
         // dump($data2);
         // die();
@@ -116,6 +142,14 @@ class MenuController extends CheckController {
                 $result=$minfo->add($data);
                 if($data){
                     $this->success("菜品添加成功！",U("Menu/menu"));
+                    //菜品添加成功后添加一条操作记录
+                    $ac=M('action');
+                    //得到操作人
+                    $action->adm_name=$_SESSION['adm_name'];
+                    $action->a_info="添加了新菜品！";//操作内容
+                    $ip = $_SERVER["REMOTE_ADDR"];
+                    $action->adm_server=$_SESSION['adm_server']=$ip;//操作主机
+                    $ac->data($action)->add();
                 }else{
                     $this->error("菜品添加失败！",U("Menu/menu")); 
                 }
@@ -131,6 +165,14 @@ class MenuController extends CheckController {
         $data=$minfo->delete($id);
         if($data){
             $this->success('删除成功!',U('Menu/menu'));
+               //菜品添加成功后添加一条操作记录
+                $ac=M('action');
+                //得到操作人
+                $action->adm_name=$_SESSION['adm_name'];
+                $action->a_info="删除了菜品！";//操作内容
+                $ip = $_SERVER["REMOTE_ADDR"];
+                $action->adm_server=$_SESSION['adm_server']=$ip;//操作主机
+                $ac->data($action)->add();
         }else{
             $this->error('删除失败!',U('Menu/menu'));
         }
@@ -169,6 +211,14 @@ class MenuController extends CheckController {
                     unlink($_SERVER["DOCUMENT_ROOT"] . "/Uplomtype/" . $filename);
                 }
                 $this->success("修改成功",U("Menu/menu")); 
+                //菜品修改成功后添加一条操作记录
+                $ac=M('action');
+                //得到操作人
+                $action->adm_name=$_SESSION['adm_name'];
+                $action->a_info="修改了菜品！";//操作内容
+                $ip = $_SERVER["REMOTE_ADDR"];
+                $action->adm_server=$_SESSION['adm_server']=$ip;//操作主机
+                $ac->data($action)->add();
             }else{
                 $this->error("修改失败",U("Menu/menu"));
             }
@@ -207,6 +257,22 @@ class MenuController extends CheckController {
         }
     }
 
+
+    //菜品下拉框选择
+    public function sea(){
+        $typeid = I('post.typeid');
+
+        $menu = M('menuinfo');
+
+        $result=$menu->table('sy_menutype m,sy_menuinfo i')->where('i.mtype_id=%d and m.mtype_id=i.mtype_id',$typeid)->select();
+       
+        if($result){
+            echo json_encode($result);
+        }else{
+            echo 0;
+        }
+
+    }
 
     
 }
