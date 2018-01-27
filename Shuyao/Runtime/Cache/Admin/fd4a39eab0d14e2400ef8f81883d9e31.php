@@ -86,7 +86,7 @@
           </td>
           <td><?php echo ($minfo["minfo_name"]); ?></td>
           <td><font color="#00CC99"><?php echo ($minfo["mtype_name"]); ?></font></td>
-          <td><?php echo ($minfo["minfo_price"]); ?>￥</td>
+          <td>￥<?php echo ($minfo["minfo_price"]); ?></td>
           <td><div class="button-group"> <a class="button border-main" 
           href="<?php echo U('Menu/updminfo');?>?id=<?php echo ($minfo["id"]); ?>"><span class="icon-edit"></span> 修改</a> <a class="button border-red" href="<?php echo U('Menu/delminfo');?>?id=<?php echo ($minfo["id"]); ?>" 
           onclick="return confirm('您确认要将此菜品删除吗?');"><span class="icon-trash-o"></span> 删除</a> </div></td>

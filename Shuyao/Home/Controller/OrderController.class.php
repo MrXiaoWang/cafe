@@ -49,7 +49,7 @@ class OrderController extends Controller {
                 $rone=$order->where("cart_menuid=%d and cart_uphone='%s'",array($cart["cart_menuid"],$cart["cart_uphone"]))->find();
                 //判断
                 if($rone){
-                    $url=U("Classifi/index");
+                    $url=U("Order/index");
                     $this->error("该菜品已经点了，可以在下方订单中修改菜品数量",$url);
 
                 }else{
@@ -57,7 +57,7 @@ class OrderController extends Controller {
                     $result=$order->data($cart)->add();
                     //判断结果是否加入成功
                     if($result){
-                        $url=U("Classifi/index");
+                        $url=U("Order/index");
                         $this->success("添加成功",$url);
                     }else{
                         //提示加入失败
@@ -72,8 +72,23 @@ class OrderController extends Controller {
             $url=U("Login/index");
             $this->display("登录后才能添加到购物车",$url);
         }
-        
-        
-        
+    }
+
+
+    public function del()
+    {
+        $id = I('post.id');
+        $phone = I('session.u_phone');
+
+
+        $shoppingcart = M('shoppingcart');
+
+        $num = $shoppingcart->where("cart_menuid= %d and cart_uphone = '%s'",$id,$phone)->delete();
+
+        if($num){
+            echo 1;
+        }else{
+            echo 0;
+        }
     }
 }

@@ -43,9 +43,7 @@ class ClassifiController extends Controller {
     public function detail($id){
         //根据菜品id显示菜品详情
         $m=M('menuinfo');
-        $data=$m->field('minfo_name,minfo_img,minfo_price,minfo_original,mtype_id,minfo_remark')->select($id);
-        // dump($data);
-        // die();
+        $data=$m->select($id);
         $this->assign('data',$data[0]);
         $this->display();
     }

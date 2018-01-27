@@ -23,7 +23,7 @@
 	</header>
 	<div class="mui-content" >
 	     <ul id="OA_task" class="mui-table-view">
-	     	<?php if(is_array($cart)): foreach($cart as $k=>$c): ?><li class="mui-table-view-cell">
+	     	<?php if(is_array($cart)): foreach($cart as $k=>$c): ?><li class="mui-table-view-cell" value="<?php echo ($c["id"]); ?>">
 		    		<div class="mui-slider-right mui-disabled">
 		    			<a class="mui-btn mui-btn-warning">删除</a>
 		    		</div>
@@ -52,7 +52,7 @@
 		    							<div class="dd-bottom-right mui-pull-right">
 		    								<!--数量操作-->
 		    								<div class="shu-jian jian<?php echo ($k); ?>">-</div>
-		    								<input type="text" value="1" class="number<?php echo ($k); ?>"/>
+		    								<input type="text" value="1" class="number<?php echo ($k); ?>" class="num" />
 		    								<div class="shu-jia jia<?php echo ($k); ?>">+</div>
 		    							</div>
 		    						</div>
@@ -90,7 +90,7 @@
 	<nav class="mui-bar mui-bar-tab" style="background: white !important;">
 	    <div class="dd-show mui-pull-left">
 			<div class="show-left mui-pull-left">
-				<div class="all-choose flo"></div>
+				<div class="all-choose flo choose"></div>
 				<span class="flo ml">全选</span>
 			</div>
 			<div class="show-right mui-pull-right">
@@ -98,16 +98,14 @@
 				<i  style="color: #B00808 !important; ">￥</i><span class="dd-total-price"  style="color: #B00808 !important; ">25</span>
 			</div>
 		</div>
-		<a href="#pay-box"><div class="dd-btn mui-pull-right">结算(<span class="d-num">1</span>)</div></a>
+		<a href="#pay-box"><div class="dd-btn mui-pull-right">结算(<span class="d-num"><?php echo $count;?></span>)</div></a>
 	</nav>
 	
 </body>
 <script type="text/javascript" src="/cafe/Public/home/js/jquery-1.11.0.js" ></script>
 <script>
 	$(function(){
-		$(".mui-pull-left").click(function(){
-			window.location.go(-1);
-		})
+		// 获取价钱
 		
 		$count = <?php echo $count;?>;
 		$price = new Array();
@@ -144,7 +142,23 @@
 			})
 			$(".dd-total-price").text($sum);
 		}
-		
+		//点击全选
+		$(".all-choose").click(function() {
+			$(this).toggleClass("choose");
+			//得到所有商品勾选框
+			var box = $("ul li .yuan");
+			if($(this).hasClass("choose")) {
+				box.addClass("choose");
+				$('.dd-total-price').text($sum);	
+				$('.d-num').text($('.choose').length-1);
+			} else {
+				box.removeClass("choose");
+
+				$('.dd-total-price').text(0);	
+				$('.d-num').text(0);
+			}
+
+		})
 		
 	})
 	

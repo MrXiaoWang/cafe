@@ -57,22 +57,22 @@
 		<!--<iframe src="footer.html"  width="100%" frameborder="0" height="49px" style="position: fixed; bottom: 0px;"></iframe>-->
 		<!--底部-->
 		<div class="footer">
-			<a href="<?php echo U('Index/index');?>"><img src="/cafe/Public/home/images/home.png" />
-				<p>首页</p>
-			</a>
-			<a href="<?php echo U('Classifi/index');?>"><img src="/cafe/Public/home/img/footer/fenlei.png" />
-				<p>分类</p>
-			</a>
-			<a href="<?php echo U('Menu/menu');?>"><img src="/cafe/Public/home/images/order.png" />
-				<p>菜谱</p>
-			</a>
-			<a href="<?php echo U('Order/index');?>"><img src="/cafe/Public/home/images/addcart.png" />
-				<p>订单</p>
-			</a>
-			<a href="<?php echo U('Our/index');?>"><img src="/cafe/Public/home/images/personalcenter.png" />
-				<p>我的</p>
-			</a>
-		</div>
+	<a href="<?php echo U('Index/index');?>"><img src="/cafe/Public/home/images/home.png" />
+		<p>首页</p>
+	</a>
+	<a href="<?php echo U('Classifi/index');?>"><img src="/cafe/Public/home/img/footer/fenlei.png" />
+		<p>分类</p>
+	</a>
+	<a href="<?php echo U('Menu/menu');?>"><img src="/cafe/Public/home/images/order.png" />
+		<p>菜谱</p>
+	</a>
+	<a href="<?php echo U('Order/index');?>"><img src="/cafe/Public/home/images/addcart.png" />
+		<p>订单</p>
+	</a>
+	<a href="<?php echo U('Our/index');?>"><img src="/cafe/Public/home/images/personalcenter.png" />
+		<p>我的</p>
+	</a>
+</div>
 		<script type="text/javascript" src="/cafe/Public/home/js/jquery-2.1.0.js"></script>
 		<script type="text/javascript" src="/cafe/Public/home/js/classify/classify.js"></script>
 		<script>

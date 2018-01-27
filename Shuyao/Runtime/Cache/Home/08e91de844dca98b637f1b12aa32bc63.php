@@ -39,22 +39,22 @@
 			<div class="mui-slider mui-a">
 				<div class="mui-slider-group mui-slider-loop mui-pic">
 					<div class="mui-slider-item">
-						<a href="detail.html"><img src="/cafe/Public/home/img/home/banner-5.jpg" /></a>
+						<a href=""><img src="/cafe/Public/home/img/home/banner-5.jpg" /></a>
 					</div>
 					<div class="mui-slider-item">
-						<a href="detail.html"><img src="/cafe/Public/home/img/home/banner-3.jpg" /></a>
+						<a href="<?php echo U('Classifi/detail');?>?id=<?php echo ($data["id"]); ?>"><img src="/cafe/Public/home/img/home/banner-3.jpg" /></a>
 					</div>
 					<div class="mui-slider-item">
-						<a href="detail.html"><img src="/cafe/Public/home/img/home/banner1.png" /></a>
+						<a href="<?php echo U('Classifi/detail');?>?id=<?php echo ($data["id"]); ?>"><img src="/cafe/Public/home/img/home/banner1.png" /></a>
 					</div>
 					<div class="mui-slider-item">
-						<a href="detail.html"><img src="/cafe/Public/home/img/home/banner-6.jpg" /></a>
+						<a href="<?php echo U('Classifi/detail');?>?id=<?php echo ($data["id"]); ?>"><img src="/cafe/Public/home/img/home/banner-6.jpg" /></a>
 					</div>
 					<div class="mui-slider-item">
-						<a href="detail.html"><img src="/cafe/Public/home/img/home/banner-4.jpg" /></a>
+						<a href="<?php echo U('Classifi/detail');?>?id=<?php echo ($data["id"]); ?>"><img src="/cafe/Public/home/img/home/banner-4.jpg" /></a>
 					</div>
 					<div class="mui-slider-item">
-						<a href="detail.html"><img src="/cafe/Public/home/img/home/banner-5.jpg" /></a>
+						<a href="<?php echo U('Classifi/detail');?>?id=<?php echo ($data["id"]); ?>"><img src="/cafe/Public/home/img/home/banner-5.jpg" /></a>
 					</div>
 
 					<div class="mui-slider-item">
@@ -142,45 +142,19 @@
 					</div>
 					<!--限时折扣列表-->
 					<ul class="mui-table-view">
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
+						<?php if(is_array($mindata)): foreach($mindata as $key=>$min): ?><li class="mui-table-view-cell mui-media">
+							<a href="<?php echo U('Classifi/detail');?>?id=<?php echo ($min["id"]); ?>">
+								<img class="mui-media-object mui-pull-left" src="/cafe/Uploads/<?php echo ($min["minfo_img"]); ?>">
 								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
+									<?php echo ($min["minfo_name"]); ?>
+									<div class='ms'><?php echo ($min["minfo_remark"]); ?></div>
 									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
+										<div class="mui-text-left"><?php echo ($min["mtype_name"]); ?></div>
+										<div class="mui-text-right">￥<?php echo ($min["minfo_price"]); ?></div>
 									</div>
 								</div>
 							</a>
-						</li>
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
-								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
-									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
-								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
-									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
-									</div>
-								</div>
-							</a>
-						</li>
+						</li><?php endforeach; endif; ?>
 					</ul>
 				</div>
 				<!--bigpic  菜品大图广告-->
@@ -212,45 +186,19 @@
 					</div>
 					<!--限时折扣列表-->
 					<ul class="mui-table-view">
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
+						<?php if(is_array($hotdata)): foreach($hotdata as $key=>$hot): ?><li class="mui-table-view-cell mui-media">
+							<a href="<?php echo U('Classifi/detail');?>?id=<?php echo ($hot["id"]); ?>">
+								<img class="mui-media-object mui-pull-left" src="/cafe/Uploads/<?php echo ($hot["minfo_img"]); ?>">
 								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
+									<?php echo ($hot["minfo_name"]); ?>
+									<div class='ms'><?php echo ($hot["minfo_remark"]); ?></div>
 									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
+										<div class="mui-text-left"><?php echo ($hot["mtype_name"]); ?></div>
+										<div class="mui-text-right">￥<?php echo ($hot["minfo_price"]); ?></div>
 									</div>
 								</div>
 							</a>
-						</li>
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
-								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
-									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
-								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
-									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
-									</div>
-								</div>
-							</a>
-						</li>
+						</li><?php endforeach; endif; ?>
 					</ul>
 
 					<!--bigpic  菜品大图广告-->
@@ -273,54 +221,28 @@
 						</div>
 					</div>
 				</div>
-				<!--明星菜品-->
+				<!--推荐菜品-->
 				<div class="uls xianshizhekou">
 
 					<!--主题名称-->
 					<div class="z-name">
-						<p><span>明星菜品</span> </p>
+						<p><span>推荐菜品</span> </p>
 					</div>
-					<!--限时折扣列表-->
+					<!--推荐菜品列表-->
 					<ul class="mui-table-view">
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
+						<?php if(is_array($tjdata)): foreach($tjdata as $key=>$tj): ?><li class="mui-table-view-cell mui-media">
+							<a href="<?php echo U('Classifi/detail');?>?id=<?php echo ($tj["id"]); ?>">
+								<img class="mui-media-object mui-pull-left" src="/cafe/Uploads/<?php echo ($tj["minfo_img"]); ?>">
 								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
+									<?php echo ($tj["minfo_name"]); ?>
+									<div class='ms'><?php echo ($tj["minfo_remark"]); ?></div>
 									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
+										<div class="mui-text-left"><?php echo ($tj["mtype_name"]); ?></div>
+										<div class="mui-text-right">￥<?php echo ($tj["minfo_price"]); ?></div>
 									</div>
 								</div>
 							</a>
-						</li>
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
-								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
-									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
-								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
-									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
-									</div>
-								</div>
-							</a>
-						</li>
+						</li><?php endforeach; endif; ?>
 					</ul>
 
 					<!--bigpic  菜品大图广告-->
@@ -352,45 +274,19 @@
 					</div>
 					<!--限时折扣列表-->
 					<ul class="mui-table-view">
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
+						<?php if(is_array($yizhouhotdata)): foreach($yizhouhotdata as $key=>$tj): ?><li class="mui-table-view-cell mui-media">
+							<a href="<?php echo U('Classifi/detail');?>?id=<?php echo ($tj["id"]); ?>">
+								<img class="mui-media-object mui-pull-left" src="/cafe/Uploads/<?php echo ($tj["minfo_img"]); ?>">
 								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
+									<?php echo ($tj["minfo_name"]); ?>
+									<div class='ms'><?php echo ($tj["minfo_remark"]); ?></div>
 									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
+										<div class="mui-text-left"><?php echo ($tj["mtype_name"]); ?></div>
+										<div class="mui-text-right">￥<?php echo ($tj["minfo_price"]); ?></div>
 									</div>
 								</div>
 							</a>
-						</li>
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
-								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
-									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
-								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
-									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
-									</div>
-								</div>
-							</a>
-						</li>
+						</li><?php endforeach; endif; ?>
 					</ul>
 
 					<!--bigpic  菜品大图广告-->
@@ -423,45 +319,19 @@
 					</div>
 					<!--限时折扣列表-->
 					<ul class="mui-table-view">
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
+						<?php if(is_array($renqidata)): foreach($renqidata as $key=>$tj): ?><li class="mui-table-view-cell mui-media">
+							<a href="<?php echo U('Classifi/detail');?>?id=<?php echo ($tj["id"]); ?>">
+								<img class="mui-media-object mui-pull-left" src="/cafe/Uploads/<?php echo ($tj["minfo_img"]); ?>">
 								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
+									<?php echo ($tj["minfo_name"]); ?>
+									<div class='ms'><?php echo ($tj["minfo_remark"]); ?></div>
 									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
+										<div class="mui-text-left"><?php echo ($tj["mtype_name"]); ?></div>
+										<div class="mui-text-right">￥<?php echo ($tj["minfo_price"]); ?></div>
 									</div>
 								</div>
 							</a>
-						</li>
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
-								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
-									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
-								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
-									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
-									</div>
-								</div>
-							</a>
-						</li>
+						</li><?php endforeach; endif; ?>
 					</ul>
 
 					<!--bigpic  菜品大图广告-->
@@ -490,232 +360,46 @@
 
 					<!--主题名称-->
 					<div class="z-name">
-						<p><span>新品发布</span> </p>
+						<p><span>新品菜肴</span> </p>
 					</div>
 					<!--限时折扣列表-->
 					<ul class="mui-table-view">
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
+					<?php if(is_array($newdata)): foreach($newdata as $key=>$new): ?><li class="mui-table-view-cell mui-media">
+							<a href="<?php echo U('Classifi/detail');?>?id=<?php echo ($new["id"]); ?>">
+								<img class="mui-media-object mui-pull-left" src="/cafe/Uploads/<?php echo ($new["minfo_img"]); ?>">
 								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
+									<?php echo ($new["minfo_name"]); ?>
+									<div class='ms'><?php echo ($new["minfo_remark"]); ?></div>
 									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
+										<div class="mui-text-left"><?php echo ($new["mtype_name"]); ?></div>
+										<div class="mui-text-right">￥<?php echo ($new["minfo_price"]); ?></div>
 									</div>
 								</div>
 							</a>
-						</li>
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
-								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
-									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
-								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
-									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
-									</div>
-								</div>
-							</a>
-						</li>
+						</li><?php endforeach; endif; ?>
+						
 					</ul>
-
-					<!--bigpic  菜品大图广告-->
-					<div class="big-pic">
-						<div>麻辣小龙虾</div>
-						<ul>
-							<li>
-								<a><img src="/cafe/Public/home/img/recommended/a7311388aaf2a7b25eb3c5efb23dba64cc0e3ed02be6a-9NjQnf_fw658.jpg" /> </a>
-							</li>
-							<li>
-								<a><img src="/cafe/Public/home/img/recommended/a7311388aaf2a7b25eb3c5efb23dba64cc0e3ed02be6a-9NjQnf_fw658.jpg" /> </a>
-							</li>
-							<li>
-								<a><img src="/cafe/Public/home/img/recommended/a7311388aaf2a7b25eb3c5efb23dba64cc0e3ed02be6a-9NjQnf_fw658.jpg" /> </a>
-							</li>
-						</ul>
-						<!--菜品大图-->
-						<div class="c-bigimg">
-							<img src="/cafe/Public/home/img/home/banner1.png" />
-						</div>
-					</div>
-				</div>
-				<!--食神菜单-->
-				<div class="uls xianshizhekou">
-
-					<!--主题名称-->
-					<div class="z-name">
-						<p><span>食神菜单</span> </p>
-					</div>
-					<!--限时折扣列表-->
-					<ul class="mui-table-view">
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
-								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
-									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
-								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
-									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
-								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
-									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
-									</div>
-								</div>
-							</a>
-						</li>
-					</ul>
-
-					<!--bigpic  菜品大图广告-->
-					<div class="big-pic">
-						<div>麻辣小龙虾</div>
-						<ul>
-							<li>
-								<a><img src="/cafe/Public/home/img/recommended/a7311388aaf2a7b25eb3c5efb23dba64cc0e3ed02be6a-9NjQnf_fw658.jpg" /> </a>
-							</li>
-							<li>
-								<a><img src="/cafe/Public/home/img/recommended/a7311388aaf2a7b25eb3c5efb23dba64cc0e3ed02be6a-9NjQnf_fw658.jpg" /> </a>
-							</li>
-							<li>
-								<a><img src="/cafe/Public/home/img/recommended/a7311388aaf2a7b25eb3c5efb23dba64cc0e3ed02be6a-9NjQnf_fw658.jpg" /> </a>
-							</li>
-						</ul>
-						<!--菜品大图-->
-						<div class="c-bigimg">
-							<img src="/cafe/Public/home/img/home/banner1.png" />
-						</div>
-					</div>
-				</div>
-
-				<!--优惠活动-->
-				<div class="uls xianshizhekou">
-
-					<!--主题名称-->
-					<div class="z-name">
-						<p><span>优惠活动</span> </p>
-					</div>
-					<!--限时折扣列表-->
-					<ul class="mui-table-view">
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
-								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
-									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
-								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
-									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="mui-table-view-cell mui-media">
-							<a href="javascript:;">
-								<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/recommended/2a7412c756a8f7d111fd4c3ca62b83d229cad6831ffed-IK5txR_fw658.jpg">
-								<div class="mui-media-body">
-									虫草花炒肉丝
-									<div class='ms'>里脊肉丝、虫草花、黑木耳、生抽、淀粉、虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳虫草花、heig木耳</div>
-									<div class='bot-xq'>
-										<div class="mui-text-left">菜谱</div>
-										<div class="mui-text-right">详情</div>
-									</div>
-								</div>
-							</a>
-						</li>
-					</ul>
-
-					<!--bigpic  菜品大图广告-->
-					<div class="big-pic">
-						<div>麻辣小龙虾</div>
-						<ul>
-							<li>
-								<a><img src="/cafe/Public/home/img/recommended/a7311388aaf2a7b25eb3c5efb23dba64cc0e3ed02be6a-9NjQnf_fw658.jpg" /> </a>
-							</li>
-							<li>
-								<a><img src="/cafe/Public/home/img/recommended/a7311388aaf2a7b25eb3c5efb23dba64cc0e3ed02be6a-9NjQnf_fw658.jpg" /> </a>
-							</li>
-							<li>
-								<a><img src="/cafe/Public/home/img/recommended/a7311388aaf2a7b25eb3c5efb23dba64cc0e3ed02be6a-9NjQnf_fw658.jpg" /> </a>
-							</li>
-						</ul>
-					</div>
-					<!--菜品大图-->
-					<div class="c-bigimg">
-						<img src="/cafe/Public/home/img/home/banner1.png" />
-					</div>
 				</div>
 			</div>
 			<!--<iframe src="footer.html"  width="100%" frameborder="0" height="49px" style="position: fixed; bottom: 0px;"></iframe>-->
 			<!--底部-->
 			<div class="footer">
-			<a href="<?php echo U('Index/index');?>"><img src="/cafe/Public/home/images/home.png" />
-				<p>首页</p>
-			</a>
-			<a href="<?php echo U('Classifi/index');?>"><img src="/cafe/Public/home/img/footer/fenlei.png" />
-				<p>分类</p>
-			</a>
-			<a href="<?php echo U('Menu/menu');?>"><img src="/cafe/Public/home/images/order.png" />
-				<p>菜谱</p>
-			</a>
-			<a href="<?php echo U('Order/index');?>"><img src="/cafe/Public/home/images/addcart.png" />
-				<p>订单</p>
-			</a>
-			<a href="<?php echo U('Our/index');?>"><img src="/cafe/Public/home/images/personalcenter.png" />
-				<p>我的</p>
-			</a>
-		</div>
+	<a href="<?php echo U('Index/index');?>"><img src="/cafe/Public/home/images/home.png" />
+		<p>首页</p>
+	</a>
+	<a href="<?php echo U('Classifi/index');?>"><img src="/cafe/Public/home/img/footer/fenlei.png" />
+		<p>分类</p>
+	</a>
+	<a href="<?php echo U('Menu/menu');?>"><img src="/cafe/Public/home/images/order.png" />
+		<p>菜谱</p>
+	</a>
+	<a href="<?php echo U('Order/index');?>"><img src="/cafe/Public/home/images/addcart.png" />
+		<p>订单</p>
+	</a>
+	<a href="<?php echo U('Our/index');?>"><img src="/cafe/Public/home/images/personalcenter.png" />
+		<p>我的</p>
+	</a>
+</div>
 		</div>
 	</body>
 	<script>

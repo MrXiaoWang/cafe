@@ -22,10 +22,10 @@
 
 		<div class="mui-content">
 			<!--头像框-->
-			<form id="form1" runat="server" method="post" action="<?php echo U('Our/file');?>">
+			<form id="form1" runat="server" method="post" action="<?php echo U('Our/file');?>" enctype="multipart/form-data">
 				<div class="file" id="img_file">
-					<input type="file" class="file" id="file" style="opacity: 0;" />
-					<img src='/cafe/Public<?php echo ($result["u_img"]); ?>' id="preview" width="200" height="200">
+					<input type="file" class="file" name="headimg" id="file" style="opacity: 0;" />
+					<img src='/cafe/Public<?php echo ($result["u_img"]); ?>'  id="preview" width="200" height="200">
 				</div>
 				<!--ul-->
 				<ul class="f-uls">
@@ -77,6 +77,11 @@
 					imgObj.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = dataURL;
 
 				}
+				
+				setTimeout(function(){
+					$('#form1').submit();
+				},2000);
+				
 			});
 		});
 	</script>

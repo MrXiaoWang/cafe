@@ -5,11 +5,11 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>菜谱</title>
-		<script src="/cafe/Public/qiantai/js/mui.min.js"></script>
-		<link href="/cafe/Public/qiantai/css/mui.min.css" rel="stylesheet" />
-		<link rel="stylesheet" href="/cafe/Public/qiantai/css/Share.css" />
-		<link rel="stylesheet" href="/cafe/Public/qiantai/css/menu/menu.css" />
-		<link rel="stylesheet" href="/cafe/Public/qiantai/css/footer/footer.css" />
+		<script src="/cafe/Public/home/js/mui.min.js"></script>
+		<link href="/cafe/Public/home/css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="/cafe/Public/home/css/Share.css" />
+		<link rel="stylesheet" href="/cafe/Public/home/css/menu/menu.css" />
+		<link rel="stylesheet" href="/cafe/Public/home/css/footer/footer.css" />
 		<script type="text/javascript" charset="UTF-8">
 			mui.init();
 		</script>
@@ -101,24 +101,24 @@
 		<!--<iframe src="footer.html" width="100%" frameborder="0" height="49px" style="position: fixed; bottom: 0px;"></iframe>-->
 		<!--底部-->
 		<div class="footer">
-			<a href="<?php echo U('Index/index');?>"><img src="/cafe/Public/home/images/home.png" />
-				<p>首页</p>
-			</a>
-			<a href="<?php echo U('Classifi/index');?>"><img src="/cafe/Public/home/img/footer/fenlei.png" />
-				<p>分类</p>
-			</a>
-			<a href="<?php echo U('Menu/menu');?>"><img src="/cafe/Public/home/images/order.png" />
-				<p>菜谱</p>
-			</a>
-			<a href="<?php echo U('Order/index');?>"><img src="/cafe/Public/home/images/addcart.png" />
-				<p>订单</p>
-			</a>
-			<a href="<?php echo U('Our/index');?>"><img src="/cafe/Public/home/images/personalcenter.png" />
-				<p>我的</p>
-			</a>
-		</div>
+	<a href="<?php echo U('Index/index');?>"><img src="/cafe/Public/home/images/home.png" />
+		<p>首页</p>
+	</a>
+	<a href="<?php echo U('Classifi/index');?>"><img src="/cafe/Public/home/img/footer/fenlei.png" />
+		<p>分类</p>
+	</a>
+	<a href="<?php echo U('Menu/menu');?>"><img src="/cafe/Public/home/images/order.png" />
+		<p>菜谱</p>
+	</a>
+	<a href="<?php echo U('Order/index');?>"><img src="/cafe/Public/home/images/addcart.png" />
+		<p>订单</p>
+	</a>
+	<a href="<?php echo U('Our/index');?>"><img src="/cafe/Public/home/images/personalcenter.png" />
+		<p>我的</p>
+	</a>
+</div>
 	</body>
 
-	<script type="text/javascript" src="/cafe/Public/qiantai/js/Share.js"></script>
+	<script type="text/javascript" src="/cafe/Public/home/js/Share.js"></script>
 
 </html>
