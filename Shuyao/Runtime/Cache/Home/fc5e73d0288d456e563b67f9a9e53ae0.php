@@ -38,19 +38,19 @@
 	    <!--订单信息-->
 	    <ul class="mui-table-view">
 			<li class="mui-table-view-cell mui-media">
-				<a href="#" class="mui-navigate-right">
+				<a href="<?php echo U('Menu/menu');?>" class="mui-navigate-right">
 					<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/icon/tb1.png"/>
 					<div class="mui-media-body">菜谱</div>
 				</a>
 			</li>
 			<li class="mui-table-view-cell mui-media">
-				<a href="#" class="mui-navigate-right">
+				<a href="<?php echo U('Order/myorder');?>" class="mui-navigate-right">
 					<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/icon/tb2.png"/>
 					<div class="mui-media-body">订单</div>
 				</a>
 			</li>
 			<li class="mui-table-view-cell mui-media">
-				<a href="#" class="mui-navigate-right">
+				<a href="<?php echo U('Discount/index');?>" class="mui-navigate-right">
 					<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/icon/tb4.png"/>
 					<div class="mui-media-body">优惠</div>
 				</a>
@@ -59,13 +59,13 @@
 		<!--优惠信息-->
 	    <ul class="mui-table-view">
 			<li class="mui-table-view-cell mui-media">
-				<a href="#" class="mui-navigate-right">
+				<a href="<?php echo U('Ranking/index');?>" class="mui-navigate-right">
 					<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/icon/tb5.png"/>
 					<div class="mui-media-body">热门</div>
 				</a>
 			</li>
 			<li class="mui-table-view-cell mui-media">
-				<a href="#" class="mui-navigate-right">
+				<a href="<?php echo U('Our/management');?>" class="mui-navigate-right">
 					<img class="mui-media-object mui-pull-left" src="/cafe/Public/home/img/icon/tb3.png"/>
 					<div class="mui-media-body">设置</div>
 				</a>
@@ -74,11 +74,12 @@
 	</div>
 	<!--底部-->
 	<!--<iframe src="footer.html" width="100%" frameborder="0" height="49px" style="position: fixed; bottom: 0px;"></iframe>-->
-		<div class="footer">
+		
+				<div class="footer">
 	<a href="<?php echo U('Index/index');?>"><img src="/cafe/Public/home/images/home.png" />
 		<p>首页</p>
 	</a>
-	<a href="<?php echo U('Classifi/index');?>"><img src="/cafe/Public/home/img/footer/fenlei.png" />
+	<a href="<?php echo U('Classifi/index');?>"><img src="/cafe/Public/home/images/edit.png" />
 		<p>分类</p>
 	</a>
 	<a href="<?php echo U('Menu/menu');?>"><img src="/cafe/Public/home/images/order.png" />
@@ -87,7 +88,7 @@
 	<a href="<?php echo U('Order/index');?>"><img src="/cafe/Public/home/images/addcart.png" />
 		<p>订单</p>
 	</a>
-	<a href="<?php echo U('Our/index');?>"><img src="/cafe/Public/home/images/personalcenter.png" />
+	<a href="<?php echo U('Our/index');?>"><img src="/cafe/Public/home/img/footer/my.png" />
 		<p>我的</p>
 	</a>
 </div>

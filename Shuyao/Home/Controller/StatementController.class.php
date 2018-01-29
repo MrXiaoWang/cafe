@@ -2,7 +2,7 @@
 namespace Admin\Controller;
 use Think\Controller;
 class StatementController extends CheckController {
-	/*查询*/
+    /*查询*/
        public function Statement(){
          //创建新模板
         $dz=M("order");
@@ -34,27 +34,22 @@ class StatementController extends CheckController {
                 echo "2";
             }
         }
-        //查询月份
-        //  $time= $orderecord ->order('y_time>UNIX_TIMESTAMP(DATE_SUB(CURDATE(), INTERVAL 1 WEEK))')->getField("y_time",true);
-        // dump($time);
-        // 当前年份数据
+        // 查询上一年份数据
         $dsql="SELECT y_time,y_earnings FROM sy_baobiao where  y_time<UNIX_TIMESTAMP(DATE_SUB(CURDATE(), INTERVAL 1 WEEK))";
         $dtime = $orderecord->query($dsql);
+        // 把时间转为一维数组
         $arr=array();
         foreach ($dtime as $key => $value) {
             $arr[$key]=$value['y_time'];
         }
+        // 把金额转为一维数组
         $arr1=array();
         foreach($dtime as $key =>$value){
             $arr1[$key]=$value['y_earnings'];
         }
-        
-
         // 查询盈利额
-        //$y_earnings = $orderecord ->getField("y_earnings",true);
-        
-        // $this->assign('arr',$arr)
         $this->assign("time",json_encode($arr));
+
         $this->assign("list",json_encode($arr1));
         //分页显示输出
         $this->display(); 

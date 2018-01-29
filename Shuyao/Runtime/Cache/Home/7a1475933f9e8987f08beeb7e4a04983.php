@@ -6,6 +6,7 @@
     <title>订单</title>
     <script src="/cafe/Public/home/js/mui.min.js"></script>
     <link href="/cafe/Public/home/css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/cafe/Public/home/css/footer/footer.css" />
     <!--<link rel="stylesheet" href="cs	s/public.css" />-->
     <link rel="stylesheet" href="/cafe/Public/home/css/order/order.css" />
     <script type="text/javascript" src="/cafe/Public/home/js/jquery-2.1.0.js" ></script>
@@ -100,6 +101,25 @@
 		</div>
 		<a href="#pay-box"><div class="dd-btn mui-pull-right">结算(<span class="d-num"><?php echo $count;?></span>)</div></a>
 	</nav>
+
+	<!--底部-->
+		<div class="footer">
+	<a href="<?php echo U('Index/index');?>"><img src="/cafe/Public/home/images/home.png" />
+		<p>首页</p>
+	</a>
+	<a href="<?php echo U('Classifi/index');?>"><img src="/cafe/Public/home/images/edit.png" />
+		<p>分类</p>
+	</a>
+	<a href="<?php echo U('Menu/menu');?>"><img src="/cafe/Public/home/images/order.png" />
+		<p>菜谱</p>
+	</a>
+	<a href="<?php echo U('Order/index');?>"><img src="/cafe/Public/home/img/footer/shopping.png" />
+		<p>订单</p>
+	</a>
+	<a href="<?php echo U('Our/index');?>"><img src="/cafe/Public/home/images/personalcenter.png" />
+		<p>我的</p>
+	</a>
+</div>
 	
 </body>
 <script type="text/javascript" src="/cafe/Public/home/js/jquery-1.11.0.js" ></script>

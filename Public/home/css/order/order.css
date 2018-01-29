@@ -207,3 +207,9 @@ body,html,.mui-content{
 	color: white !important;
 	line-height:50px;
 }
+.mui-bar-tab{
+	bottom: 50px;
+}
+.footer{
+	border-top: 1px solid #ccc
+}

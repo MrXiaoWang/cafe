@@ -8,13 +8,60 @@
 		<link href="__PUBLIC__/home/css/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="__PUBLIC__/home/css/public.css" />
 		<link rel="stylesheet" href="__PUBLIC__/home/css/Appleid/Appleid.css" />
-	</head>
+		<script type="text/javascript" src="__PUBLIC__/home/js/jquery.js"></script>
+      	<script language="javascript">
+			var iTime = 59;
+			var Account;
+			function RemainTime(){
+				document.getElementById('zphone').disabled = true;
+				var iSecond,sSecond="",sTime="";
+				if (iTime >= 0){
+					iSecond = parseInt(iTime%60);
+					iMinute = parseInt(iTime/60)
+					if (iSecond >= 0){
+						if(iMinute>0){
+							sSecond = iMinute + "分" + iSecond + "秒";
+						}else{
+							sSecond = iSecond + "秒";
+						}
+					}
+					sTime=sSecond;
+					if(iTime==0){
+						clearTimeout(Account);
+						sTime='获取手机验证码';
+						iTime = 59;
+						document.getElementById('zphone').disabled = false;
+					}else{
+						Account = setTimeout("RemainTime()",1000);
+						iTime=iTime-1;
+					}
+				}else{
+					sTime='没有倒计时';
+				}
+				document.getElementById('zphone').value = sTime;
+			}	
 
-	<body>
+			function get_mobile_code(){
+				$url = "{:U('Login/send')}";
+		        $.post($url, {mobile:jQuery.trim($('#mobile').val()),send_code:<?php echo $_SESSION['send_code'];?>}, function(msg) {
+					alert(jQuery.trim(unescape(msg)));
+					if(jQuery.trim(unescape(msg))=='提交成功'){
+						RemainTime();
+					}
+		        });
+			};
+			
+		</script>
 		<script src="__PUBLIC__/home/js/mui.min.js"></script>
-		<script type="text/javascript">
+		<script type="text/javascript" charset="utf-8">
 			mui.init()
 		</script>
+      	<style>
+			.span{display: none;}
+		</style>
+  </head>
+
+    <body>
 		<header class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 			<h1 class="mui-title">绑定手机号</h1>
@@ -23,14 +70,16 @@
 			<div class="centent">
 				<p class="a-bin">绑定后您可以直接使用手机号登录</p>
 				<!--表单-->
-				<form>
+				<form action="{:U('Login/bindphone')}" method="post" name="formUser">
 					<div class="input">
-						<input type="text" class="usesrPhone" placeholder="请输入您的手机号" />
-						<div class="n-yz">
-							<input type="text" class="A-yzm" placeholder="请输入验证码" />
-							<input type="button" value="获取验证码" class="n-btn" />
-
-							<input type="button" value="确定" class="n-btnys" />
+						<input type="text" id="mobile" name="mobile" class="uinputBg usesrPhone" placeholder="请输入您的手机号" />
+                      	<span style="color:#FF0000" class="span"> *</span> 
+						<input type="password" class="userPass" name="pass" placeholder="请输入密码" />
+						
+                      	<div class="n-yz">
+							<input type="text" name="mobile_code" class="A-yzm" placeholder="请输入验证码" />
+							<input id="zphone" type="button" value="获取验证码" class="n-btn " onClick="get_mobile_code()"; />
+							<input type="submit" value="确定" class="n-btnys" />
 						</div>
 
 					</div>
@@ -39,6 +88,21 @@
 
 		</div>
 	</body>
+
 	<script type="text/javascript" src="__PUBLIC__/home/js/jquery-1.11.0.js"></script>
-	<script type="text/javascript" src="__PUBLIC__/home/js/Appleid/Appleid.js" ></script>
+
+	<script type="text/javascript">
+		$('#mobile').blur(function(){
+			$apiUrl = '{:U("API/IsZhuce")}';
+			$.post($apiUrl,{mobile:$(this).val()},function(dd){
+				if(dd.trim()=="0"){
+					$('.span').text('该手机号已存在').css("color","#FF0000").css("display","block");
+					$('#zphone').disabled=true;
+				}else{
+					$('.span').text('可以注册');
+					$('.span').css("color","green").css("display","block");
+				}
+			})
+		})
+	</script>
 </html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我的订单</title>
+    <script src="__PUBLIC__/home/js/mui.min.js"></script>
+    <link href="__PUBLIC__/home/css/mui.min.css" rel="stylesheet"/>
+    <!--<link rel="stylesheet" href="css/public.css" />-->
+    <link rel="stylesheet" href="__PUBLIC__/home/css/myorder/myOrder.css" />
+    <link rel="stylesheet" href="__PUBLIC__/home/css/footer/footer.css" />
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">我的订单</h1>
+	</header>
+	<div class="mui-content">
+	    <ul class="mui-table-view">
+
+			<foreach name="cart" item="c" key="k">
+				
+				<li class="mui-table-view-cell">
+				<div class="d-box">
+					<div class="box-left mui-pull-left">
+						<!--图片-->
+						<div class="img-box">
+							<img src="__UPLOAD__/{$c.minfo_img}" />
+						</div>
+					</div>
+					<div class="box-right mui-pull-right">
+						<!--信息-->
+						<div class="info-top">
+							<div class="top-left">
+								<!--食物名称-->
+								<span>{$c.minfo_name}</span>
+							</div>
+							<div class="top-right mui-pull-right">
+								<!--操作数量-->
+								<input type="text" value="{$c.cart_number}" />
+							</div>
+						</div>
+						<div class="info-center">
+							<i>￥</i><span class="price">{$c.menuinfo_afterdis}</span><span class="sta">状态：</span><span class="statusOn">
+							<if condition="$c.o_chudan eq 0 ">未出单<else /> 已出单</if>
+							</span>
+						</div>
+						<if condition="$c.o_chudan eq 0 ">
+							<div class="info-bottom">
+								<div class="tuicai on" id="tui">退菜</div>
+								<div class="cui on" id="cui">催一催</div>
+							</div>
+						<else />
+							 <div class="info-bottom">
+								<div class="tuicai no">退菜</div>
+								<div class="cui no">催一催</div>
+							</div>
+						</if>
+						
+					</div>
+				</div>
+			</li>
+
+			</foreach>
+
+			
+			
+		</ul>
+	</div>
+	<!--<iframe src="footer.html" width="100%" frameborder="0" height="49px" style="position: fixed; bottom: 0px;"></iframe>-->
+<!--底部-->
+		<!-- <div class="footer">
+	<a href="{:U('Index/index')}"><img src="__PUBLIC__/home/images/home.png" />
+		<p>首页</p>
+	</a>
+	<a href="{:U('Classifi/index')}"><img src="__PUBLIC__/home/images/edit.png" />
+		<p>分类</p>
+	</a>
+	<a href="{:U('Menu/menu')}"><img src="__PUBLIC__/home/images/order.png" />
+		<p>菜谱</p>
+	</a>
+	<a href="{:U('Order/index')}"><img src="__PUBLIC__/home/img/footer/shopping.png" />
+		<p>订单</p>
+	</a>
+	<a href="{:U('Our/index')}"><img src="__PUBLIC__/home/images/personalcenter.png" />
+		<p>我的</p>
+	</a>
+</div> -->
+	<script type="text/javascript" src="__PUBLIC__/home/js/jquery-2.1.0.js" ></script>
+	<script type="text/javascript" src="__PUBLIC__/home/js/myorder/myorder.js" ></script>
+</body>
+</html>

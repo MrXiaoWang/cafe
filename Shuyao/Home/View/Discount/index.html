@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>优惠活动</title>
+		<script src="__PUBLIC__/home/js/mui.min.js"></script>
+		<link href="__PUBLIC__/home/css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="__PUBLIC__/home/css/discount/Discount.css" />
+		<link rel="stylesheet" href="__PUBLIC__/home/css/Share.css" />
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">优惠活动</h1>
+		</header>
+
+		<div id="slider" class="mui-slider">
+			<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+				<a class="mui-control-item mui-active" href="#item1mobile">
+				限时折扣
+			</a>
+				<a class="mui-control-item" href="#item2mobile">
+				周年庆
+			</a>
+				<a class="mui-control-item" href="#item3mobile">
+				生日折扣
+			</a>
+			</div>
+			<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+			<div class="mui-slider-group">
+				<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+					<div id="scroll1" class="mui-scroll-wrapper">
+
+						<div class="mui-scroll">
+							<div class="Slogan">
+								<img src="__PUBLIC__/home/img/Discount/2.jpg" />
+							</div>
+							<div class="datatime">
+								<p>剩余时间：<span>02:00</span>
+								</p>
+							</div>
+							<div class="p-box">
+								<ul>
+								<!-- one -->
+								<volist name="onedata" id="one">
+									<li>
+										<div class="p-big">
+											<img src="__UPLOAD__/{$one.minfo_img}" />
+											<div class="n-div">
+												<div class="n-pone"><a class="x-name">{$one.minfo_name}</a><a class="x-money">￥{$one.minfo_price}</a></div>
+												<div class="n-ptwo"><a>{$one.mtype_name}</a> <s>￥{$one.minfo_original}</s> </div>
+												<div class="n-btn">
+								<form action='{:U("Order/addOrder")}' method="post">
+									<input type="hidden" value="{$one.id}" name="menu_id"/>
+									<input type="submit" style="color: #fff; border: 1px solid #b00808; background-color: #B00808;border-radius: 15px;font-size: 12px;    line-height: 12px; margin: 0px 7px;border: 0px;margin-left: 30px;" id="add-dd" value="加入订单"/> 
+								</form>
+													<!-- <input type="button" value="加入订单" /> -->
+												</div>
+											</div>
+										</div>
+									</li>
+								</volist>
+								<!-- one==== -->
+								</ul>
+
+								<ul>
+								<!-- two -->
+									<volist name="twodata" id="two">
+									<li>
+										<div class="p-big">
+											<img src="__UPLOAD__/{$two.minfo_img}" />
+											<div class="n-div">
+												<div class="n-pone"><a class="x-name">{$two.minfo_name}</a><a class="x-money">￥{$two.minfo_price}</a></div>
+												<div class="n-ptwo"><a>{$two.mtype_name}</a> <s>￥{$two.minfo_original}</s> </div>
+												<div class="n-btn">
+										<form action='{:U("Order/addOrder")}' method="post">
+									<input type="hidden" value="{$two.id}" name="menu_id"/>
+									<input type="submit" style="color: #fff; border: 1px solid #b00808; background-color: #B00808;border-radius: 15px;font-size: 12px;    line-height: 12px; margin: 0px 7px;border: 0px;margin-left: 30px;" id="add-dd" value="加入订单"/> 
+								</form>
+													<!-- <input type="button" value="加入订单" /> -->
+												</div>
+											</div>
+										</div>
+									</li>
+								</volist>
+								<!-- two ===-->
+								</ul>
+								<ul>
+								<!-- three -->
+								<volist name="threedata" id="three">
+									<li>
+										<div class="p-big">
+											<img src="__UPLOAD__/{$three.minfo_img}" />
+											<div class="n-div">
+												<div class="n-pone"><a class="x-name">{$three.minfo_name}</a><a class="x-money">￥{$three.minfo_price}</a></div>
+												<div class="n-ptwo"><a>{$three.mtype_name}</a> <s>￥{$three.minfo_original}</s> </div>
+												<div class="n-btn">
+									<form action='{:U("Order/addOrder")}' method="post">
+									<input type="hidden" value="{$three.id}" name="menu_id"/>
+									<input type="submit" style="color: #fff; border: 1px solid #b00808; background-color: #B00808;border-radius: 15px;font-size: 12px;    line-height: 12px; margin: 0px 7px;border: 0px;margin-left: 30px;" id="add-dd" value="加入订单"/> 
+								</form>
+													<!-- <input type="button" value="加入订单" /> -->
+												</div>
+											</div>
+										</div>
+									</li>
+								</volist>
+								<!-- three=== -->
+								</ul>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="item2mobile" class="mui-slider-item mui-control-content">
+					<div id="scroll2" class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<div class="Slogan">
+								<img src="__PUBLIC__/home/img/Discount/4.jpg" />
+							</div>
+							<div class="datatime">
+								<p>新品优惠大放送</p>
+							</div>
+							<div class="p-boxs">
+								<ul>
+								<volist name="fourdata" id="four">
+									<li>
+										<div class="p-bigs">
+											<img src="__UPLOAD__/{$four.minfo_img}" />
+											<div class="n-divs">
+												<div class="n-pones"><a class="x-names">{$four.minfo_name}</a></div>
+												<div class="n-ptwos"><a>{$four.mtype_name}</a> </div>
+												<div id="as">
+													<a class="x-money"><span>现价：￥{$four.minfo_price}</span><p>原价：<s>￥{$four.minfo_original}</s> </p></a>
+												</div>
+												<div class="n-btns">
+												<form action='{:U("Order/addOrder")}' method="post">
+									<input type="hidden" value="{$four.id}" name="menu_id"/>
+									<input type="submit" style="color: #fff; border: 1px solid #b00808; background-color: #B00808;border-radius: 15px;font-size: 12px;    line-height: 12px; margin: 0px 7px;    border: 0px; margin-left: 30px; margin: -10px 9px; float: right;" id="add-dd" value="加入订单"/> </form>
+													<!-- <input type="button" value="加入订单" /> -->
+												</div>
+											</div>
+										</div>
+									</li>
+								</volist>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="item3mobile" class="mui-slider-item mui-control-content">
+					<div id="scroll3" class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<div class="Slogan">
+								<img src="__PUBLIC__/home/img/Discount/2.jpg" />
+							</div>
+							<div class="datatime">
+								<p>生日优惠大放送</p>
+							</div>
+							<div class="p-box">
+								<ul>
+								<volist name="fivedata" id="five">
+									<li>
+										<div class="p-big">
+											<img src="__UPLOAD__/{$five.minfo_img}" />
+											<div class="n-div">
+												<div class="n-pone"><a class="x-name">{$five.minfo_name}</a><a class="x-money">￥{$five.minfo_price}</a></div>
+												<div class="n-ptwo"><a>{$five.mtype_name}</a> <s>￥{$five.minfo_original}</s> </div>
+												<div class="n-btn">
+									<form action='{:U("Order/addOrder")}' method="post">
+									<input type="hidden" value="{$five.id}" name="menu_id"/>
+									<input type="submit" style="color: #fff; border: 1px solid #b00808; background-color: #B00808;border-radius: 15px;font-size: 12px;    line-height: 12px; margin: 0px 7px;border: 0px;margin-left: 30px;" id="add-dd" value="加入订单"/> 
+								</form>
+													<!-- <input type="button" value="加入订单" /> -->
+												</div>
+											</div>
+										</div>
+									</li>
+								</volist>
+									
+								</ul>
+
+								<ul>
+									<volist name="sixdata" id="six">
+									<li>
+										<div class="p-big">
+											<img src="__UPLOAD__/{$six.minfo_img}" />
+											<div class="n-div">
+												<div class="n-pone"><a class="x-name">{$six.minfo_name}</a><a class="x-money">￥{$six.minfo_price}</a></div>
+												<div class="n-ptwo"><a>{$six.mtype_name}</a> <s>￥{$six.minfo_original}</s> </div>
+												<div class="n-btn">
+									<form action='{:U("Order/addOrder")}' method="post">
+									<input type="hidden" value="{$six.id}" name="menu_id"/>
+									<input type="submit" style="color: #fff; border: 1px solid #b00808; background-color: #B00808;border-radius: 15px;font-size: 12px;    line-height: 12px; margin: 0px 7px;border: 0px;margin-left: 30px;" id="add-dd" value="加入订单"/> 
+								</form>
+													<!-- <input type="button" value="加入订单" /> -->
+												</div>
+											</div>
+										</div>
+									</li>
+								</volist>
+								</ul>
+								<ul>
+									<volist name="sevendata" id="seven">
+									<li>
+										<div class="p-big">
+											<img src="__UPLOAD__/{$seven.minfo_img}" />
+											<div class="n-div">
+												<div class="n-pone"><a class="x-name">{$seven.minfo_name}</a><a class="x-money">￥{$seven.minfo_price}</a></div>
+												<div class="n-ptwo"><a>{$seven.mtype_name}</a> <s>￥{$seven.minfo_original}</s> </div>
+												<div class="n-btn">
+									<form action='{:U("Order/addOrder")}' method="post">
+									<input type="hidden" value="{$seven.id}" name="menu_id"/>
+									<input type="submit" style="color: #fff; border: 1px solid #b00808; background-color: #B00808;border-radius: 15px;font-size: 12px;    line-height: 12px; margin: 0px 7px;border: 0px;margin-left: 30px;" id="add-dd" value="加入订单"/> 
+								</form>
+													<!-- <input type="button" value="加入订单" /> -->
+												</div>
+											</div>
+										</div>
+									</li>
+								</volist>
+								</ul>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</body>
+	<script>
+		mui.init({
+			swipeBack: false
+		});
+		(function($) {
+			$('.mui-scroll-wrapper').scroll({
+				indicators: true //是否显示滚动条
+			});
+		})(mui);
+	</script>
+
+</html>

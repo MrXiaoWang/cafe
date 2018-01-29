@@ -104,10 +104,10 @@
 	<a href="<?php echo U('Index/index');?>"><img src="/cafe/Public/home/images/home.png" />
 		<p>首页</p>
 	</a>
-	<a href="<?php echo U('Classifi/index');?>"><img src="/cafe/Public/home/img/footer/fenlei.png" />
+	<a href="<?php echo U('Classifi/index');?>"><img src="/cafe/Public/home/images/edit.png" />
 		<p>分类</p>
 	</a>
-	<a href="<?php echo U('Menu/menu');?>"><img src="/cafe/Public/home/images/order.png" />
+	<a href="<?php echo U('Menu/menu');?>"><img src="/cafe/Public/home/img/footer/caipu.png" />
 		<p>菜谱</p>
 	</a>
 	<a href="<?php echo U('Order/index');?>"><img src="/cafe/Public/home/images/addcart.png" />
@@ -117,6 +117,7 @@
 		<p>我的</p>
 	</a>
 </div>
+		
 	</body>
 
 	<script type="text/javascript" src="/cafe/Public/home/js/Share.js"></script>

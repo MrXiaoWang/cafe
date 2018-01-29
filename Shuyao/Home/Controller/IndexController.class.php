@@ -5,9 +5,14 @@ class IndexController extends Controller {
     
 
     public function index(){
-
+        $minfo=M('menuinfo');
+        //首页轮播
+        $indexdata=$minfo->order('rand()')->where('mtype_id!=1017')->limit(0,7)->select();//随机取7个    
+        // dump($indexdata);
+        // die();
+        $this->assign('indexdata',$indexdata);
+        
     	//查询前三条新品
-    	$minfo=M('menuinfo');
     	$newdata=$minfo->table('sy_menutype m,sy_menuinfo i')->where('i.minfo_isnew=1 and m.mtype_id=i.mtype_id')->limit(0,3)->select();//取前三个    
     	// dump($newdata);
     	// die();

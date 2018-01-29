@@ -38,19 +38,19 @@
 	    <!--订单信息-->
 	    <ul class="mui-table-view">
 			<li class="mui-table-view-cell mui-media">
-				<a href="#" class="mui-navigate-right">
+				<a href="{:U('Menu/menu')}" class="mui-navigate-right">
 					<img class="mui-media-object mui-pull-left" src="__PUBLIC__/home/img/icon/tb1.png"/>
 					<div class="mui-media-body">菜谱</div>
 				</a>
 			</li>
 			<li class="mui-table-view-cell mui-media">
-				<a href="#" class="mui-navigate-right">
+				<a href="{:U('Order/myorder')}" class="mui-navigate-right">
 					<img class="mui-media-object mui-pull-left" src="__PUBLIC__/home/img/icon/tb2.png"/>
 					<div class="mui-media-body">订单</div>
 				</a>
 			</li>
 			<li class="mui-table-view-cell mui-media">
-				<a href="#" class="mui-navigate-right">
+				<a href="{:U('Discount/index')}" class="mui-navigate-right">
 					<img class="mui-media-object mui-pull-left" src="__PUBLIC__/home/img/icon/tb4.png"/>
 					<div class="mui-media-body">优惠</div>
 				</a>
@@ -59,13 +59,13 @@
 		<!--优惠信息-->
 	    <ul class="mui-table-view">
 			<li class="mui-table-view-cell mui-media">
-				<a href="#" class="mui-navigate-right">
+				<a href="{:U('Ranking/index')}" class="mui-navigate-right">
 					<img class="mui-media-object mui-pull-left" src="__PUBLIC__/home/img/icon/tb5.png"/>
 					<div class="mui-media-body">热门</div>
 				</a>
 			</li>
 			<li class="mui-table-view-cell mui-media">
-				<a href="#" class="mui-navigate-right">
+				<a href="{:U('Our/management')}" class="mui-navigate-right">
 					<img class="mui-media-object mui-pull-left" src="__PUBLIC__/home/img/icon/tb3.png"/>
 					<div class="mui-media-body">设置</div>
 				</a>
@@ -74,6 +74,23 @@
 	</div>
 	<!--底部-->
 	<!--<iframe src="footer.html" width="100%" frameborder="0" height="49px" style="position: fixed; bottom: 0px;"></iframe>-->
-		<include file="common/footer"/>
+		
+				<div class="footer">
+	<a href="{:U('Index/index')}"><img src="__PUBLIC__/home/images/home.png" />
+		<p>首页</p>
+	</a>
+	<a href="{:U('Classifi/index')}"><img src="__PUBLIC__/home/images/edit.png" />
+		<p>分类</p>
+	</a>
+	<a href="{:U('Menu/menu')}"><img src="__PUBLIC__/home/images/order.png" />
+		<p>菜谱</p>
+	</a>
+	<a href="{:U('Order/index')}"><img src="__PUBLIC__/home/images/addcart.png" />
+		<p>订单</p>
+	</a>
+	<a href="{:U('Our/index')}"><img src="__PUBLIC__/home/img/footer/my.png" />
+		<p>我的</p>
+	</a>
+</div>
 </body>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title>菜品详情</title>
     <script src="/cafe/Public/home/js/mui.min.js"></script>
+    <script src="/cafe/Public/home/js/jquery-1.11.0.js"></script>
     <link href="/cafe/Public/home/css/mui.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="/cafe/Public/home/css/xiangqing.css" />
     <link rel="stylesheet" href="/cafe/Public/home/css/detail/detail.css" />
@@ -55,20 +56,25 @@
 	<!--加入订单-->
 	<d class="mui-bar mui-bar-tab" id="nav">
 		<a class="check" href="<?php echo U('Order/index');?>">查看订单</a>
-		<form action='<?php echo U("Order/addOrder");?>' method="post">
-			<input type="hidden" value="<?php echo ($data["id"]); ?>" name="menu_id"/>
-			<input type="submit" id="add-dd" value="加入订单"/>
-		</form>
-	    <!--<input type="button" id="add-dd" value="加入订单"/>-->
-	    
+			<input type="hidden" value="<?php echo ($data["id"]); ?>" name="menu_id" id="menu_id"/>
+			<input type="button" id="add-dd" value="加入订单"/>
 	</nav>
 </body>
-<!-- 
 <script>
 	document.getElementById("add-dd").addEventListener('tap', function() {
-		mui.toast('加入成功');
+		$url = '<?php echo U("Order/addOrder");?>';
+		$.post($url,{menu_id:$('#menu_id').val()},function(dd){
+			if(dd.trim()=="1"){
+				mui.toast('加入成功');	
+			}else if(dd.trim()=="0"){
+				mui.toast('加入失败');	
+			}else if(dd.trim()=="2"){
+				mui.toast('菜品已存在');	
+			}
+			
+		});
+		
 	});
 
 </script> 
--->
 </html>

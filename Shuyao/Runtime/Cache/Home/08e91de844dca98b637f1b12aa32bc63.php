@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title>首页</title>
+		<title>蜀肴首页</title>
 		<script src="/cafe/Public/home/js/mui.min.js"></script>
 		<link href="/cafe/Public/home/css/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="/cafe/Public/home/css/Home/home.css" />
@@ -38,28 +38,11 @@
 		<div class="mui-content">
 			<div class="mui-slider mui-a">
 				<div class="mui-slider-group mui-slider-loop mui-pic">
-					<div class="mui-slider-item">
-						<a href=""><img src="/cafe/Public/home/img/home/banner-5.jpg" /></a>
-					</div>
-					<div class="mui-slider-item">
-						<a href="<?php echo U('Classifi/detail');?>?id=<?php echo ($data["id"]); ?>"><img src="/cafe/Public/home/img/home/banner-3.jpg" /></a>
-					</div>
-					<div class="mui-slider-item">
-						<a href="<?php echo U('Classifi/detail');?>?id=<?php echo ($data["id"]); ?>"><img src="/cafe/Public/home/img/home/banner1.png" /></a>
-					</div>
-					<div class="mui-slider-item">
-						<a href="<?php echo U('Classifi/detail');?>?id=<?php echo ($data["id"]); ?>"><img src="/cafe/Public/home/img/home/banner-6.jpg" /></a>
-					</div>
-					<div class="mui-slider-item">
-						<a href="<?php echo U('Classifi/detail');?>?id=<?php echo ($data["id"]); ?>"><img src="/cafe/Public/home/img/home/banner-4.jpg" /></a>
-					</div>
-					<div class="mui-slider-item">
-						<a href="<?php echo U('Classifi/detail');?>?id=<?php echo ($data["id"]); ?>"><img src="/cafe/Public/home/img/home/banner-5.jpg" /></a>
-					</div>
-
-					<div class="mui-slider-item">
-						<a href="detail.html"><img src="/cafe/Public/home/img/home/banner-3.jpg" /></a>
-					</div>
+				<!-- 轮播循环 -->
+				<?php if(is_array($indexdata)): $i = 0; $__LIST__ = $indexdata;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$in): $mod = ($i % 2 );++$i;?><div class="mui-slider-item">
+						<a href="<?php echo U('Classifi/detail');?>?id=<?php echo ($in["id"]); ?>"><img src="/cafe/Uploads/<?php echo ($in["minfo_img"]); ?>" /></a>
+					</div><?php endforeach; endif; else: echo "" ;endif; ?>
+				<!-- ======轮播循环结束 -->	
 				</div>
 				<div class="mui-slider-indicator w_banner">
 					<div class="mui-indicator mui-active"></div>
@@ -75,25 +58,25 @@
 				<div class="eight-z">
 					<ul>
 						<li>
-							<a href="Discount.html">
+							<a href="<?php echo U('Discount/index');?>">
 								<img src="/cafe/Public/home/img/home/1.gif" />
 								<p class="mui-text-center">限时折扣</p>
 							</a>
 						</li>
 						<li>
-							<a>
+							<a onclick="window.location.href='#hot'">
 								<img src="/cafe/Public/home/img/home/2.gif" />
 								<p class="mui-text-center">热卖推荐</p>
 							</a>
 						</li>
 						<li>
-							<a>
+							<a href="<?php echo U('Ranking/index');?>">
 								<img src="/cafe/Public/home/img/home/3.gif" />
 								<p class="mui-text-center">明星菜品</p>
 							</a>
 						</li>
 						<li>
-							<a href="Ranking.html?id=12">
+							<a href="<?php echo U('Ranking/index');?>">
 								<img src="/cafe/Public/home/img/home/4.gif" />
 								<p class="mui-text-center">一周热门</p>
 							</a>
@@ -101,25 +84,25 @@
 					</ul>
 					<ul>
 						<li>
-							<a>
+							<a onclick="window.location.href='#rebqi'">
 								<img src="/cafe/Public/home/img/home/5.gif" />
 								<p class="mui-text-center">人气菜肴</p>
 							</a>
 						</li>
 						<li>
-							<a href="Ranking.html?id=10">
+							<a onclick="window.location.href='#new'">
 								<img src="/cafe/Public/home/img/home/6.gif" />
 								<p class="mui-text-center">新品发布</p>
 							</a>
 						</li>
 						<li>
-							<a>
+							<a href="<?php echo U('Ranking/index');?>">
 								<img src="/cafe/Public/home/img/home/7.gif" />
 								<p class="mui-text-center">食神菜单</p>
 							</a>
 						</li>
 						<li>
-							<a href="Discount.html">
+							<a href="<?php echo U('Discount/index');?>">
 								<img src="/cafe/Public/home/img/home/8.png" />
 								<p class="mui-text-center">优惠活动</p>
 							</a>
@@ -128,7 +111,7 @@
 					<!--分割线-->
 					<hr style="border: 0.5px solid gainsboro;" />
 				</div>
-				<!--广告位-->
+				<!--热菜随机一个菜-->
 				<div class="guanggaowei">
 					<img src="/cafe/Public/home/img/home/banner1.png" />
 				</div>
@@ -159,7 +142,7 @@
 				</div>
 				<!--bigpic  菜品大图广告-->
 				<div class="big-pic">
-					<div>麻辣小龙虾</div>
+					<!-- <div>麻辣小龙虾</div>
 					<ul>
 						<li>
 							<a><img src="/cafe/Public/home/img/recommended/a7311388aaf2a7b25eb3c5efb23dba64cc0e3ed02be6a-9NjQnf_fw658.jpg" /> </a>
@@ -170,7 +153,7 @@
 						<li>
 							<a><img src="/cafe/Public/home/img/recommended/a7311388aaf2a7b25eb3c5efb23dba64cc0e3ed02be6a-9NjQnf_fw658.jpg" /> </a>
 						</li>
-					</ul>
+					</ul> -->
 					<!--菜品大图-->
 					<div class="c-bigimg">
 						<img src="/cafe/Public/home/img/home/banner1.png" />
@@ -178,10 +161,10 @@
 				</div>
 
 				<!--热卖推荐-->
-				<div class="uls xianshizhekou">
+				<div class="uls xianshizhekou" >
 
 					<!--主题名称-->
-					<div class="z-name">
+					<div class="z-name" id="hot">
 						<p><span>热卖推荐</span> </p>
 					</div>
 					<!--限时折扣列表-->
@@ -203,7 +186,7 @@
 
 					<!--bigpic  菜品大图广告-->
 					<div class="big-pic">
-						<div>麻辣小龙虾</div>
+						<!-- <div>麻辣小龙虾</div>
 						<ul>
 							<li>
 								<a><img src="/cafe/Public/home/img/recommended/a7311388aaf2a7b25eb3c5efb23dba64cc0e3ed02be6a-9NjQnf_fw658.jpg" /> </a>
@@ -214,7 +197,7 @@
 							<li>
 								<a><img src="/cafe/Public/home/img/recommended/a7311388aaf2a7b25eb3c5efb23dba64cc0e3ed02be6a-9NjQnf_fw658.jpg" /> </a>
 							</li>
-						</ul>
+						</ul> -->
 						<!--菜品大图-->
 						<div class="c-bigimg">
 							<img src="/cafe/Public/home/img/home/banner1.png" />
@@ -247,7 +230,7 @@
 
 					<!--bigpic  菜品大图广告-->
 					<div class="big-pic">
-						<div>麻辣小龙虾</div>
+						<!-- <div>麻辣小龙虾</div>
 						<ul>
 							<li>
 								<a><img src="/cafe/Public/home/img/recommended/a7311388aaf2a7b25eb3c5efb23dba64cc0e3ed02be6a-9NjQnf_fw658.jpg" /> </a>
@@ -258,7 +241,7 @@
 							<li>
 								<a><img src="/cafe/Public/home/img/recommended/a7311388aaf2a7b25eb3c5efb23dba64cc0e3ed02be6a-9NjQnf_fw658.jpg" /> </a>
 							</li>
-						</ul>
+						</ul> -->
 						<!--菜品大图-->
 						<div class="c-bigimg">
 							<img src="/cafe/Public/home/img/home/banner1.png" />
@@ -291,7 +274,7 @@
 
 					<!--bigpic  菜品大图广告-->
 					<div class="big-pic">
-						<div>麻辣小龙虾</div>
+						<!-- <div>麻辣小龙虾</div>
 						<ul>
 							<li>
 								<a><img src="/cafe/Public/home/img/recommended/a7311388aaf2a7b25eb3c5efb23dba64cc0e3ed02be6a-9NjQnf_fw658.jpg" /> </a>
@@ -302,7 +285,7 @@
 							<li>
 								<a><img src="/cafe/Public/home/img/recommended/a7311388aaf2a7b25eb3c5efb23dba64cc0e3ed02be6a-9NjQnf_fw658.jpg" /> </a>
 							</li>
-						</ul>
+						</ul> -->
 						<!--菜品大图-->
 						<div class="c-bigimg">
 							<img src="/cafe/Public/home/img/home/banner1.png" />
@@ -314,7 +297,7 @@
 				<div class="uls xianshizhekou">
 
 					<!--主题名称-->
-					<div class="z-name">
+					<div class="z-name" id="renqi">
 						<p><span>人气菜肴</span> </p>
 					</div>
 					<!--限时折扣列表-->
@@ -336,7 +319,7 @@
 
 					<!--bigpic  菜品大图广告-->
 					<div class="big-pic">
-						<div>麻辣小龙虾</div>
+						<!-- <div>麻辣小龙虾</div>
 						<ul>
 							<li>
 								<a><img src="/cafe/Public/home/img/recommended/a7311388aaf2a7b25eb3c5efb23dba64cc0e3ed02be6a-9NjQnf_fw658.jpg" /> </a>
@@ -347,7 +330,7 @@
 							<li>
 								<a><img src="/cafe/Public/home/img/recommended/a7311388aaf2a7b25eb3c5efb23dba64cc0e3ed02be6a-9NjQnf_fw658.jpg" /> </a>
 							</li>
-						</ul>
+						</ul> -->
 						<!--菜品大图-->
 						<div class="c-bigimg">
 							<img src="/cafe/Public/home/img/home/banner1.png" />
@@ -359,7 +342,7 @@
 				<div class="uls xianshizhekou">
 
 					<!--主题名称-->
-					<div class="z-name">
+					<div class="z-name" id="new">
 						<p><span>新品菜肴</span> </p>
 					</div>
 					<!--限时折扣列表-->
@@ -384,10 +367,10 @@
 			<!--<iframe src="footer.html"  width="100%" frameborder="0" height="49px" style="position: fixed; bottom: 0px;"></iframe>-->
 			<!--底部-->
 			<div class="footer">
-	<a href="<?php echo U('Index/index');?>"><img src="/cafe/Public/home/images/home.png" />
+	<a href="<?php echo U('Index/index');?>"><img src="/cafe/Public/home/img/footer/home.png" />
 		<p>首页</p>
 	</a>
-	<a href="<?php echo U('Classifi/index');?>"><img src="/cafe/Public/home/img/footer/fenlei.png" />
+	<a href="<?php echo U('Classifi/index');?>"><img src="/cafe/Public/home/images/edit.png" />
 		<p>分类</p>
 	</a>
 	<a href="<?php echo U('Menu/menu');?>"><img src="/cafe/Public/home/images/order.png" />

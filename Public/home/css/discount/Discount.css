@@ -147,6 +147,10 @@ li {
 .x-name {
 	font-size: 14px;
 	color: black;
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
 }
 
 .x-money {
